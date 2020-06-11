@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nature Tours | Destinations</title>
+    <!--Ikonat ion-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Fontet e Google-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/destinations-styles.css">
+    <!--Ikonat e rrjeteve sociale-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!--Maps-->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <nav id="nav">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                
+                <div class="menu-icons open">
+                    <i id="menuIcon" class="icon ion-md-menu"></i>
+                </div>
+
+                <ul class="nav-list">
+                    <div class="menu-icons close">
+                        <i class="icon ion-md-close"></i>
+                    </div>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="destinations.html" class="nav-link current">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!--TILE ARTICLE-->
+    		<!--Previous-->
+     		<a class="article-prev" id="article-prev" onclick="article(this.id)"><i class="icon ion-ios-arrow-back" style='margin: 0 7px';></i></a>
+     		<!--Next-->
+     		<a class="article-next" id="article-next" onclick="article(this.id)"><i class="icon ion-ios-arrow-forward" style='margin: 0 7px';></i></a>
+        <!--Exit-->
+        <a class="article-btn" id="article-btn" onclick="article(this.id)"><i class="icon ion-md-close" style='margin: 0 5px';></i></a>
+
+        <div class="article-image hidden" id="article-img">
+           <h1 id="article-vendi"></h1>
+           <h3 id="article-shteti"></h3>
+        </div>
+            <div class="tile-container">
+              <div class="destination-container">
+                 <div class="hidden-article">
+                      	
+                        <div class="paragraph-section">
+                          <p id="article-paragraph"></p>
+                          <h1 id="article-lat" class="hidden"></h1>
+                          <h1 id="article-lng" class="hidden"></h1>
+
+                        </div>
+
+                        <div class="map-section" id="map-section"></div>
+                  </div>
+              </div>
+            </div>
+
+
+     <main id="main">
+        <button onclick="topFunction()" id="goUpBtn" title="Go to top"><i class="icon ion-md-arrow-up" style='margin: 0 5px';></i></button>
+        <section class="traveller">
+        <div class="container">
+            <div class="main-message">
+                
+                <h1>Choose your desired activity</h1>
+
+                <p>
+                    Visit multiple countries and landscapes all over the world
+                </p>
+
+                <br><br><br>
+                  <a href="#hiking" class="category-btn">Hiking</a>
+                  <a href="#camping" class="category-btn">Camping</a>
+                  <a href="#rafting" class="category-btn">River Rafting</a>
+                  <a href="#snowboarding" class="category-btn">SnowBoarding</a>
+                  <a href="#skydiving" class="category-btn">SkyDiving</a>
+                  <a href="#fishing" class="category-btn">Fishing</a>
+                
+            </div>
+        </div>
+        </section>
+
+
+
+        <!--DESTINATION TILES-->
+        <section class="experience-outdoors">
+
+            <!--Hiking Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                  <div class="title-heading" id="hiking">
+                  	  <br><br>
+                      <h1>Hiking Destinations</h1>
+                      <p>Walking boots and waterproof coats at the ready.</p>
+
+                  </div>
+
+
+                  <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="h0">
+                        <h1>Pennine Way</h1>
+                        <h3>United Kingdom</h3>
+                        <p class="hidden">
+                          Stretching 268 miles from the Derbyshire Peak District to the Scottish Borders, the Pennine Way is the United Kingdom's most famous long distance path.
+                          The entire walk takes around three weeks, passing over wild moorland east of Manchester and through the picture postcard Yorkshire Dales, before crossing the ancient border of Hadrian's Wall and on toward Scotland.
+                          One for outdoor fanatics, camping enthusiasts and anyone who can handle the vagaries of great British weather.
+                        </p>
+                        <h1 class="hidden">54</h1>
+                        <h1 class="hidden">-2</h1>
+
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="h1">
+                        <h1>Camino de Santiago de Compostela</h1>
+                        <h3>Spain</h3>
+                        <p class="hidden">
+                          Rather than following a single path, the Camino, also known as the Way of St. James, is actually a series of different pilgrimage routes, all ending at the shrine of the apostle St. James in the cathedral at Santiago de Compostela.
+                          The most popular modern route follows a line across northern Spain from the French Pyrenees.
+                          While some choose to stay at monasteries along the way, plenty of operators offer hotel stays and luggage transfers.
+                          Pura Aventura has an 11-day trip that passes through Galicia, staying in boutique inns, with bags sent ahead each day.
+                        </p>
+                        <h1 class="hidden">42</h1>
+                        <h1 class="hidden">-2</h1>
+
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="h2">
+                        <h1>Appalachian Trail</h1>
+                        <h3>United States</h3>
+                        <p class="hidden">
+                          Extending for 2,200 miles, the Appalachian Trail is billed as the longest hiking-only footpath in the world.
+                          It runs from Springer Mountain in Georgia to Mount Katahdin in Maine, passing through some of the most remote country in the United States.
+                          That means it's an undertaking, either for those with endless vacation allowance, or walkers looking to do a small chunk of a classic route.
+                          Well-marked paths and campsites mean it can be tackled alone. But those keen on comfort can use companies like Go Shenandoah, which offers pre-booked lodge accommodation and packed lunches in the spectacular Shenandoah National Park, Virginia, home to some of the best scenery on the trail.
+                        </p>
+                        <h1 class="hidden">37</h1>
+                        <h1 class="hidden">-81</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h3">
+                        <h1>The Basho Wayfarer</h1>
+                        <h3>Japan</h3>
+                        <p class="hidden">
+                          Japan boasts numerous ancient trails, connecting temples and cities. This self-guided trip follows a route taken by the poet Matsuo Basho over 300 years ago.
+                          The six-day trek starts in Sendai and works its way through the northern Tohoku region, passing through the UNESCO World Heritage Site of Hiraizumi and along the ancient Dewa Kaido path, with its beech and cherry forests, before heading into the mountains of Natagiri-toge and finishing at the temple of Yamadera.
+                          Tour operator Walk Japan offers accommodation in traditional ryokan, with access to onsen baths to soothe aching bones after a long day's hiking.
+                        </p>
+                        <h1 class="hidden">36</h1>
+                        <h1 class="hidden">139</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="h4">
+                        <h1>Refugio Frey and Cerro Catedral</h1>
+                        <h3>Argentina</h3>
+                        <p class="hidden">
+                          The area around Bariloche in Argentina's Lake District is home to several stunning walks.
+                          But for those with limited time, it's hard to beat the one-day trek to Refugio Frey and Cerro Catedral.
+                          A bus to Villa Catedral drops at the start of a wide, well-marked path, which winds its way into the Andes, passing through woods before emerging above the tree line into a world of spectacular, soaring peaks. Intrepid visitors can stay at Refugio Frey, either in the hut or camping in its grounds.
+                       </p>
+                       <h1 class="hidden">-41</h1>
+                        <h1 class="hidden">-71</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h5">
+                        <h1>Mount Toubkal</h1>
+                        <h3>Morocco</h3>
+                        <p class="hidden">
+                          North Africa's highest peak at 4,167 meters (13,671 feet), a hike to the top of Mount Toubkal isn't for the faint-hearted.
+                          The path upwards rises from the village of Imlil, passing over a dry river bed before rising sharply through the shrine at Sidi Chamharouch and on towards a large mountain hut.
+                          After overnighting here, hikers strap on crampons and set off up the snowfield to the summit, where the Atlas Mountains open out and the views are relentless.
+                          A local guide and muleteers for carrying luggage are a must, with tour operator Much Better Adventures able to arrange both, along with transfers to and from Marrakech.
+                        </p>
+                        <h1  class="hidden">31</h1>
+                        <h1  class="hidden">-7</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="h6">
+                        <h1>Dragon's Back</h1>
+                        <h3>Hong Kong</h3>
+                        <p class="hidden">
+                          Hong Kong may be known for its towering skyscrapers and narrow streets, but the mainland and islands are dotted with myriad hiking trails, the most famous of which is the Dragon's Back.
+                          Easily reached by bus from downtown Hong Kong, the path begins in a shady tree tunnel on the Shek O Road, before scaling Shek O Peak, with vistas over white sandy beaches, lush hills and tropical islands. The route ends at the beach at Big Wave Bay, its warm waters perfect for a post-hike dip.
+                        </p>
+                        <h1 class="hidden">22</h1>
+                        <h1 class="hidden">114</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h7">
+                        <h1>The Dingle Way</h1>
+                        <h3>Ireland</h3>
+                        <p class="hidden">
+                          Stretching 111 miles, The Dingle Way is a circular path that offers the best way to get under the skin of wild County Kerry in Ireland's south west.
+                          Starting in the town of Tralee, the clockwise path follows narrow roads, known as boreens, taking in the wide sweep of sand at Inch Strand, passing along the clifftops outside Dingle town and heading around the edge of Mount Brandon, the highest peak on the Dingle Peninsula.
+                          Ireland Ways arranges accommodation along the route, which can be tackled over as many as ten days.
+                        </p>
+                        <h1 class="hidden">53</h1>
+                        <h1 class="hidden">-6</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="h8">
+                        <h1>Tergo La Trek</h1>
+                        <h3>Bhutan</h3>
+                        <p class="hidden">
+                          The relative inaccessibility of Bhutan and need for tourist passes means its trails are unspoiled and ripe for exploration. Tergo-La Trek, in the Haa Valley, is one of the country's lesser known routes.
+                            This guided trek from Bhutanese tour operator Blue Poppy rises from 3,500 meters to 4,135 meters, passing through peaceful forest paths and up wild mountain tracks, with views of Kanchenjunga, the third highest peak in the world.
+                            Yak herders' camps and distant villages add to the sense of being in another world.
+                        </p>
+                        <h1 class="hidden">27</h1>
+                        <h1 class="hidden">89</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h9">
+                        <h1>Tahoe Rim Trail</h1>
+                        <h3>United States</h3>
+                        <p class="hidden">
+                          A 165-mile loop around the Tahoe Rim Basin, this iconic trail was established in 1981 and is regarded as one of the finest hikes in the United States.
+                          Passing through six counties and four national forests, in land that straddles California and Nevada, the Tahoe Rim Trail is the best way to explore the Sierra Nevada and Carson ranges.
+                          Intrepid travelers can pack a tent and get back to nature on an 11-day jaunt, best undertaken between July and September.
+                        </p>
+                        <h1 class="hidden">38</h1>
+                        <h1 class="hidden">-120</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h10">
+                        <h1>The Silk Road</h1>
+                        <h3>Armenia</h3>
+                        <p class="hidden">
+                          Easily overlooked, Armenia has some of the best walking trails in Europe.
+                          The 11-day Armenia and the Silk Road trip takes in some of its finest routes, connecting the UNESCO protected monasteries of Sanahin and Haghpat, passing over limestone peaks and through verdant forests, with the opportunity to hike in the wild Geghama Mountains and climb to the top of Aragats, the country's tallest mountain.
+                        </p>
+                        <h1 class="hidden">40</h1>
+                        <h1 class="hidden">44</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h11">
+                        <h1>Lechweg Trail</h1>
+                        <h3>Austria/Germany</h3>
+                        <p class="hidden">
+                          Starting in the Bavarian town of Fussen, this nine-day route follows the Lechweg river to its source in the Austrian state of Vorarlberg.
+                            Passing the royal castles of a King Ludwig II of Bavaria, Germany as well as crystal clear lakes, the trail heads through the Tiroler Lech National Park, a protected area with lush meadows, turquoise water and ibex at every turn.
+                            Although the trail is self-guided, Walks Worldwide can arrange accommodation and meals, meaning visitors only need worry about putting on their boots and backpacks each morning.
+                        </p>
+                        <h1 class="hidden">54</h1>
+                        <h1 class="hidden">10</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h12">
+                        <h1>Indus Valley</h1>
+                        <h3>Himalaya, India</h3>
+                        <p class="hidden">
+                          While a Himalayan trek is always going to be magical, this remote three-day jaunt in the Indus Valley takes some beating.
+                          The hike, which is an extension of luxury operator Shakti Himalaya's seven-day itinerary to the region, leaves the village of Moncarmo and heads to Matho Phu and Shang Phu.
+                          Phu translates as summer pastures, meaning this lush ground makes for pleasant walking while staring at the surrounding peaks and glaciers.
+                          The trip includes stops at local tea houses, with dome tents pitched each evening for a comfortable night's sleep.
+                        </p>
+                        <h1 class="hidden">28</h1>
+                        <h1 class="hidden">77</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h13">
+                        <h1>Bwindi Impenetrable Forest</h1>
+                        <h3>Uganda</h3>
+                        <p class="hidden">
+                          Wildlife walks don't come more fascinating than a trip into Uganda's Bwindi Impenetrable Forest, where you can get up close and personal with the area's mountain gorilla population.
+                          As part of a wider itinerary, Yellow Zebra Safaris offers walks in which visitors are taken on hikes across the forest to meet habituated gorillas used to the presence of humans.
+                          Groups are typically limited to eight people.
+                        </p>
+                        <h1 class="hidden">-1</h1>
+                        <h1 class="hidden">29</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h14">
+                        <h1>West Coast Trail</h1>
+                        <h3>Vancouver Island</h3>
+                        <p class="hidden">
+                          Canada's wilderness and sheer scale mean it's blessed with some truly astounding hiking trails.
+                          The classic West Coast Trail covers 47 miles around southern Vancouver Island, with stunning ocean scenery at Bonilla Point and accessible sea caves at Owen Point.
+                          The hike involves scaling ladders, wading through rivers and battling along muddy tracks, but with the bonus of being able to camp out in spectacular open country.
+                          Although self-guided, walkers need to reserve a place on the trail at the start of the year, with spaces severely limited.
+                        </p>
+                        <h1 class="hidden">48</h1>
+                        <h1 class="hidden">-124</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h15">
+                        <h1>Percorsi Occitani</h1>
+                        <h3>Maira Valley, Italy</h3>
+                        <p class="hidden">
+                         A network of ancient pathways through the Cottian Alps, a walk in the Percorsi Occitani is like stepping back in time.
+                          Many locals still speak the Occitan language, while the remoteness of the Maira Valley makes it one of the most unspoiled corners of northern Italy.
+                          Linking hamlets and villages, this nine-day self-guided route scales some of the area's more challenging hills, dipping into green valleys, with stays at traditional mountain refuges.
+                          Luggage transfers and traditional Occitan meals can be arranged by Inn Travel.
+                        </p>
+                        <h1 class="hidden">44</h1>
+                        <h1 class="hidden">7</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h16">
+                        <h1>Lares and Royal Inca Trail</h1>
+                        <h3>Peru</h3>
+                        <p class="hidden">
+                          The Inca Trail to Macchu Picchu is unquestionably one of South America's greatest treks.
+                          It can also feel overrun at times, which is where this excellent alternative comes in.
+                          Lares and Royal Inca Trail, a guided three-day trek in the Lares region, follows an ancient Inca path through Andean forests, up the Huchayccasa pass and through the village of Huacahuasi, with the chance to catch glimpse of soaring Mount Veronica.
+                          Once over, hikers can then catch a train to the Inca Trail, completing the final stretch through the cloud forest and into the famous ruins.
+                        </p>
+                        <h1 class="hidden">-11</h1>
+                        <h1 class="hidden">-77</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h17">
+                        <h1>Monteverde Cloud Forest Reserve</h1>
+                        <h3>Costa Rica</h3>
+                        <p class="hidden">
+                          Costa Rica's rich biodiversity is best explored in the high cloud forests of Monteverde.
+                          The reserve has a series of well-marked paths ideal for those keen on an easy stroll with the chance to see the area's striking bird life and flora up close without having to pack for a multi-day hike. Orchids, ferns and mosses abound, with the chance of seeing a brightly colored quetzal flying high above the trees.
+                        </p>
+                        <h1 class="hidden">10</h1>
+                        <h1 class="hidden">-84</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h18">
+                        <h1>The Lycian Way</h1>
+                        <h3>Turkey</h3>
+                        <p class="hidden">
+                          Covering 300 miles around the coast of southern Turkey from Fethiye to Antalya, the Lycian Way gives walkers a chance to explore the former kingdom of Lycia.
+                            Passing through the ancient town of Sidyma and the ghost town of Kaya, the route cleaves to the water, with the chance of a cooling dip after a long day's walk.
+                            Peter Sommer Travels offers an eight-day guided hike along the opening stretch, with the chance to stay on a traditional gulet sail boat each night.
+                            The route is well-marked and can be followed without a guide.
+                        </p>
+                        <h1 class="hidden">36</h1>
+                        <h1 class="hidden">29</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                     
+                      <div class="image" id="h19">
+                        <h1>The Balkans</h1>
+                        <h3>Montenegro/Albania</h3>
+                        <p class="hidden">
+                          While the Alps is renowned for classic European hikes, the Balkans' beautiful mountains make for an excellent alternative for those who'd rather hike away from the crowds.
+                          Kucki Kom, one of Montenegro's most arresting peaks at 2,487 meters, is worth the trip alone, with the scramble to the top rewarded with huge views of the Komovi Mountains.
+                          Those after a longer hike can book onto Ramblers Holidays' 14-day route along Montenegro and Albania's best hiking trails, starting in Kotor and ending in Tirana.
+                        </p>
+                        <h1 class="hidden">41</h1>
+                        <h1 class="hidden">20</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                    
+                      <div class="image" id="h20">
+                        <h1>Cloud Forest trek</h1>
+                        <h3>Laos</h3>
+                        <p class="hidden">
+                         The remote area of Houaphan in Laos is home to Indochina's last wild tigers. Inside Asia's Cloud Forest Trek gives hikers the opportunity to catch a glimpse of these elusive creatures, with the chance to set and monitor camera traps.
+                          This multi-day guided trip to the summit of Phou Louey, Laos' third highest mountain, also includes overnight stays in bamboo huts and time spent watching wildlife at the Poung Nied Salt Lick.
+                        </p>
+                        <h1 class="hidden">1</h1>
+                        <h1 class="hidden">103</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      
+                      <div class="image" id="h21">
+                        <h1>Cape to Cape Track</h1>
+                        <h3>Western Australia</h3>
+                        <p class="hidden">
+                          Starting at the lighthouse at Cape Naturaliste and finishing 76 miles away at the lighthouse at Cape Leeuwin, the most south westerly point in mainland Australia, this track is the ultimate way to see some of the finest scenery in Australia.
+                          Hikers can camp along the route or arrange accommodation via the Friends of the Cape to Cape Track.
+                          The Cape to Cape Track route is well signposted, but guides are available to those who want to learn more about the area and its beaches and forests.
+                        </p>
+                        <h1 class="hidden">-34</h1>
+                        <h1 class="hidden">115</h1>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!--Camping Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                <div class="title-heading" id="camping">
+                      <br><br>
+                      <h1>Camping Destinations</h1>
+                      <p>There are few more rewarding feelings than pitching your tent and spending the night beneath the stars.</p>
+                </div>
+              
+                <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="c0">
+                        <h1>Mount Cook National Park</h1>
+                        <h3>New Zealand</h3>
+                        <p class="hidden">
+                        	You can’t talk about camping without waxing lyrical about New Zealand’s out-of-this-world landscapes. Mount Cook (or Aoraki to the Maori) is the country’s highest mountain and the entire surrounding rugged region is the South Island’s finest outdoor playground. Views from the campgrounds here are simply staggering.
+                        </p>
+                        <h1 class="hidden">-43</h1>
+                        <h1 class="hidden">170</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c1">
+                        <h1>Devon</h1>
+                        <h3>England</h3>
+                        <p class=hidden>
+                        	The southwest of England feels a million miles from the rest of the UK. The campsites on Dartmoor and Exmoor are fantastic places to pitch a tent, while you’ll find spots with unbeatable vistas along the craggy cliffs that sweep down to the Atlantic on the north Devon coast. Come in autumn, when you can watch a huge red sun dip slowly over the horizon.
+                        </p>
+                        <h1 class="hidden">50</h1>
+                        <h1 class="hidden">-3</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c2">
+                        <h1>Loch Lomond & The Trossachs</h1>
+                        <h3>Scottland</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden">56</h1>
+                        <h1 class="hidden">-4</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c3" >
+                        <h1>The Alps</h1>
+                        <h3>France</h3>
+                        <p class="hidden">
+                        	The dominion of skiers in the winter months, the Alps transform as the snow thaws. Once the balmy spring weather arrives, so do hikers and campers. You’ll find beautifully fresh alpine air and quaint villages nestled in the foothills. It’s a magical place to camp, made all the more special by the glittering night sky above.
+                        </p>
+                        <h1 class="hidden">47</h1>
+                        <h1 class="hidden">9</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c4" >
+                        <h1>Hossa National Park</h1>
+                        <h3>Finland</h3>
+                        <p class="hidden">
+                        	Finland’s newest national park (set to open in June 2017) is in the wild northeast of the country, a rugged landscape of rivers, lakes and old-growth spruce forests. Finland welcomes wild campers and the park is dotted with remote lean-to shelters and rustic cabins, all with spots for campfires.
+                        </p>
+                        <h1 class="hidden">65</h1>
+                        <h1 class="hidden">29</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c5" >
+                        <h1>Skane</h1>
+                        <h3>Sweden</h3>
+                        <p class="hidden">
+                        	Long bright summer days pass delightfully slowly in Sweden’s most southerly region. Gentle countryside backs the coastline and there are many tranquil places to camp near Skåne’s beaches, lakes or forests. As in much of Scandinavia, wild camping is positively encouraged under Allemansrätt, the “right to roam”.
+                        </p>
+                        <h1 class="hidden">59</h1>
+                        <h1 class="hidden">13</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c6" >
+                        <h1>Zion National Park</h1>
+                        <h3>Utah, USA</h3>
+                        <p class="hidden">
+                        	Zion is one of the most spectacular parks in the Southwest, with its red sandstone cliffs, rugged plateaus and forested canyons. Watchmen and South are the established campgrounds, but if you really want to get away from the crowds you can get a permit to overnight at one of the otherworldly wilderness campsites in the park’s interior.
+                        </p>
+                        <h1 class="hidden">37</h1>
+                        <h1 class="hidden">-113</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c7" >
+                        <h1>Patagonia</h1>
+                        <h3>Argentina & Chile</h3>
+                        <p class="hidden">
+                        	South America’s southern tip, spanning both Argentina and Chile, is as wild as it gets and a great destination for anyone with an adventurous spirit. Follow the RN-40 to discover campsites with wide open skies and snow-capped mountain vistas; this pristine landscape begs for outdoor exploration.
+                        </p>
+                        <h1 class="hidden">-27</h1>
+                        <h1 class="hidden">-61</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c8" >
+                        <h1>Vancouver Island</h1>
+                        <h3>British Columbia</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c9" >
+                        <h1>Asturias</h1>
+                        <h3>Spain</h3>
+                        <p class="hidden">
+                        	Time has stood still in this massively underrated region of northwest Spain, where villages cling to lush green mountains and fishing communities dot the craggy coastline. Some of the most beautiful campsites in Spain can be found on the coast here, along with delicious food and welcoming hosts.
+                        </p>
+                        <h1 class="hidden">43</h1>
+                        <h1 class="hidden">-5</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="c10" >
+                        <h1>Connemara</h1>
+                        <h3>Ireland</h3>
+                        <p class="hidden">
+                        	The coastal region west of Galway cries out for leisurely exploration. Connemara’s landscape is dramatic and windswept, and camping here isn’t for the faint hearted, but you can’t beat getting up close to the Atlantic seascape or exploring remote valleys just inland.
+                        </p>
+                        <h1 class="hidden">53</h1>
+                        <h1 class="hidden">-9</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c11" >
+                        <h1>Simien Mountains</h1>
+                        <h3>Ethiopia</h3>
+                        <p class="hidden">
+                        	Recognised by UNESCO as a World Heritage Site, the jagged Simien massif and its deep precipices rival the Grand Canyon for beauty. The landscape is phenomenal and the best way to explore is on a guided trek, sleeping under canvas in one of the park’s basic campsites.
+                        </p>
+                        <h1 class="hidden">13</h1>
+                        <h1 class="hidden">38</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image" id="c12" >
+                        <h1>Tasmania</h1>
+                        <h3>Australia</h3>
+                        <p class="hidden">
+                        	Over 40% of Tasmania is protected within national parks and reserves. On an island the size of Switzerland, that means numerous wild and remote regions littered with beautifully sited campgrounds. Whether you’re travelling with a tent or a camper van, popular spots include the highlands of Cradle Mountain-Lake St Clair National Park and the spectacular coastline of Tasman Peninsula.
+                        </p>
+                        <h1 class="hidden">-42</h1>
+                        <h1 class="hidden">146</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c13" >
+                        <h1>The Seto Inland Sea (Setonaikal)</h1>
+                        <h3>Japan</h3>
+                        <p class="hidden">
+                        	In the wide, watery expanse between Japan’s Honshū, Shikoku and Kyūshū islands you’ll find a little-known idyll made up of many tinier islands. Exploring by bike is becoming popular as seven modern bridges now link the islets. At night, it’s possible to camp beside the subtropical white-sand beaches.
+                        </p>
+                        <h1 class="hidden">34</h1>
+                        <h1 class="hidden">133</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="c14" >
+                        <h1>Ladakh</h1>
+                        <h3>India</h3>
+                        <p class="hidden">
+                        	This sparsely populated, high-altitude region in Jammu and Kashmir conjures pictures of gompas nestling in the mountainside and colourful prayer flags fluttering in the wind. Once the mountain passes open in the spring, camps of pre-erected tents pop up, though hardier souls still carry in their own.
+                        </p>
+                        <h1 class="hidden">34</h1>
+                        <h1 class="hidden">78</h1>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <!--River Rafting Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                <div class="title-heading" id="rafting">
+                      <br><br>
+                      <h1>River Rafting Destinations</h1>
+                      <p>Over the river and through the woods.</p>
+                </div>
+              
+                <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r0" >
+                        <h1>Grand Canyon</h1>
+                        <h3>Arizona/Utah, USA</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r1" >
+                        <h1>Middle Fork</h1>
+                        <h3>Idaho, USA</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r2" >
+                        <h1>Zambezi River</h1>
+                        <h3>Victoria Falls, Zambia/Zimbabwe, Africa</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r3" >
+                        <h1>Fatalefu River</h1>
+                        <h3>Chile, South America</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r4" >
+                        <h1>Rangitikei</h1>
+                        <h3>North Island, New Zealand</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r5" >
+                        <h1>Noce River</h1>
+                        <h3>Trentino-Alto Adige, Northern Italy</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r6" >
+                        <h1>Sjoa River</h1>
+                        <h3>Norway</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+                     
+                    <div class="activities-grid-item">
+                      <div class="image"  id="r7" >
+                        <h1>Tara River</h1>
+                        <h3>Montenegro</h3>
+                        <p class="hidden">
+                        	The scattered peaks, valleys and villages of the Trossachs – often called the Highlands in miniature – make an incredibly scenic backdrop for a camping trip. Amid these romantic lochs and glens you’ll find everything from sprawling caravan parks to remote wild camping spots; be sure to read the Outdoor Access Code before you go.
+                        </p>
+                        <h1 class="hidden"></h1>
+                        <h1 class="hidden"></h1>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+
+            <!--Snowboarding Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                <div class="title-heading" id="snowboarding">
+                      <br><br>
+                      <h1>Snowboarding Destinations</h1>
+                      <p>Over the river and through the woods.</p>
+                </div>
+              
+                <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s0" >
+                        <h1>Snowbird</h1>
+                        <h3>Utah, USA</h3>
+                        <p class="hidden">
+                          Go to the bird for loads of diverse and easily accessible terrain. Located in Little Cottonwood Canyon, Snowbird is great for both skiing and boarding and boasts over 4700 acres of skiable slopes. It also has the most vertical terrain in Utah so you can seriously charge the steeps.
+
+                          The snow at Snowbird is famed for its incredible lightness. Two years ago, the bird was blessed with more than two metres of light dry Utah powder, although, on average, annual snowfall is still an impressive 1,270cm. For the best fall-line riding, hit Mach Schnell off the Snowbird tram which has up to 45-degree steeps through open glades and bowls.
+
+                          Snowbird also offers a complimentary orientation tour of the mountain departing from the Plaza Deck every morning at 9.30am and 10.30am.
+                        </p>
+                        <h1 class="hidden">40</h1>
+                        <h1 class="hidden">-111</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s1" >
+                        <h1>Cervinia</h1>
+                        <h3>Italy</h3>
+                        <p class="hidden">
+                          Number 2 on our 'best snowboarding resorts' list goes to Cervinia. Another one that has extensive terrain for beginners and is a little closer to home is Cervinia. Located on the border of Switzerland and Italy, near the top of the Aosta Valley, Cervinia offers miles of long gentle runs and breathtaking views of the Matterhorn. The peak, just across the border into Switzerland, is over 3,600 metres – an altitude which guarantees good quality snow.
+
+                          Cervinia is much cheaper than glitzy Zermatt and if the lift linking the two ski areas is open you’ve got yourself a real bargain and more advanced terrain to explore. Intermediates will enjoy themselves here too and the decent Indian Park will occupy freestylers.  
+
+                          The downside of Cervinia is that, with the exception of the magnificent Matterhorn, it’s a bit plain Jane and advanced riders may get bored. But like we said, it’s one for beginners.
+                        </p>
+                        <h1 class="hidden">45</h1>
+                        <h1 class="hidden">7</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s2" >
+                        <h1>Telluride</h1>
+                        <h3>Colorado, USA</h3>
+                        <p class="hidden">
+                          Quiet slopes, non-existent queues and a vast open space waiting to be conquered. But what really stands out about this resort is the ample terrain suitable for beginners. Telluride is something of a novice heaven offering regularly groomed runs that are wide and gentle even at the highest peaks. Beginner trails are well marked and easy-peasy to manoeuvre. And open glades provide for many scenic runs.  
+
+                          That’s not to say that there isn’t plenty of challenging terrain – there is; 41 percent of the trails are classed as “advanced” or “expert”, and there are some pretty steep lines to ride including the now infamous Black Diamond Run: “The Plunge”.
+                        </p>
+                        <h1 class="hidden">37</h1>
+                        <h1 class="hidden">-107</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s3" >
+                        <h1>Verbier</h1>
+                        <h3>Switzerland</h3>
+                        <p class="hidden">
+                          The freeriding at Verbier can be summed up in one word: Superior.
+
+                          Expert riders hoping to get the most out of their stay should consider hiring a guide to fully appreciate the extent of the steeps, although, for most, the variety of piste options and itineraires will more than suffice.  Located in the Four Valleys the lifts connect the ski areas of Verbier, La Tzoumaz, Nendaz, Veysonnaz and Val de Bagnes, so there is heaps to discover.
+
+                          For extreme off-piste head to the Mont-Gelé cable car where there’s a ton of unfathomably steep couloirs and open slopes from which to bomb down. Some of the best powder can be found at the Mont-Fort Glacier; ride into Tortin and you’ll discover an epic open bowl. The main intermediate ski areas, Les Attelas and Les Ruinettes, generally suffer from overcrowding so be savvy and head to Savoleyres which offers tree lined pistes and challenging reds. 
+
+                          Verbier attracts a global clientele and as would be expected from a world-class resort the après-ski rocks.
+                        </p>
+                        <h1 class="hidden">46</h1>
+                        <h1 class="hidden">7</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s4" >
+                        <h1>Charmonix</h1>
+                        <h3>France</h3>
+                        <p class="hidden">
+                          Ploughing the snow against the incredible backdrop that is Mont Blanc on steep and rugged terrain, Chamonix is not for the faint-hearted. It is however a mecca for boarders who crave adventure and freeriding. Very well deserving of its place on our 'best snowboarding resorts' list, it offers excellent glacial runs, steep tree-runs and couloirs, plus a half-pipe and loads of natural freestyle features. The downside of a resort as popular as Chamonix are the crowds so if you prefer your slopes less trampled go after the New Year.
+
+                          Chamonix is an historic ski town with charming French features. The ski areas are fairly spread out along the valley but with such inspiring scenery it won’t seem like a bother. 
+
+                          There are blue runs but these, more often than not, feel like reds. Intermediates should head towards Brevant, where the steep and varied runs also test experts. If you’re feeling really brave, head for Argentieres Grands Montets – you’ll be skiing alongside the experts.
+                        </p>
+                        <h1 class="hidden">45</h1>
+                        <h1 class="hidden">6</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s5" >
+                        <h1>Mammoth Mountain</h1>
+                        <h3>California, USA</h3>
+                        <p class="hidden">
+                          Voted the No.1 ‘Family Friendly Resort” by OnTheSnow visitors, Mammoth Mountain delivers epic skiing and riding as well as a plethora of other activities.
+
+                          First though, the riding: Serious effort has gone into developing Mammoth’s park terrain with suitable features for all abilities. Virgin freestylers can take advantage of the Discovery Park, full of unthreatening jumps and jibs, before progressing to Wonderland which features a 12-foot pipe leading to the lower rail garden. At the main park, with 21.5 acres to play in, there are technical jumps and super-sized jumps. There are nine parks in total plus an Olympic-sized pipe that gets a lot of action from competitors, and an ever-evolving boardercross course.
+
+                          As for snow, it dumps here and the quality is top-notch. It’s typically one of the first resorts across the US to open and one of the last to close – as late as 4 July. A wide variety of grub and decent après-ski completes this all-round great resort.
+                        </p>
+                        <h1 class="hidden">37</h1>
+                        <h1 class="hidden">-119</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s6" >
+                        <h1>Squaw Valley</h1>
+                        <h3>California, USA</h3>
+                        <p class="hidden">
+                          Over the hill from Alpine Meadows is Squaw Valley which like its neighbour offers freeriders steep lines to blaze down. There is also terrain for beginners but most runs favour skilled riders.
+
+                          Squaw is glitzier and more popular than Alpine and as such crowds gather, however, they normally disperse during the week. The terrain is similar to that of Alpine’s but with more vertical rise. There are lots of natural and man-made hits, cornices, cliff bands, and technical chutes. Skilled boarders battle it out in the Snowboard King of the Mountain competition each winter, which always draws the crowds.
+
+                          Kids are well looked after at Squaw, there’s the SnoVentures Centre, New Adventure Zone and Family Cross Course via the brand new Big Blue Express (6-pack) chairlift. Like Alpine, Squaw recently became a Burton Learn to Ride Centre.
+                        </p>
+                        <h1 class="hidden">39</h1>
+                        <h1 class="hidden">-120</h1>
+                      </div>
+                    </div>
+                     
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s7" >
+                        <h1>Alpine Meadows</h1>
+                        <h3>California, USA</h3>
+                         <p class="hidden">
+                          Alpine Meadows has a chilled-out vibe, a snowboard-friendly set-up and awe-inspiring views of the beautiful Lake Tahoe. There’s heaps of ample terrain to suit everyone, 25 percent for newbies, 40 percent for intermediates, and 35 percent for pros which makes for a pretty decent balance. Beginners can enjoy smooth, wide open runs off of the Weasel Chair while experienced riders can enjoy the glades and access to some of the finest backcountry in North America. Getting there is easy as the Summit Six will transport you to over 70 percent of the mountain’s terrain.
+
+                          Recently, the guys at Alpine hooked up with Snow Park Technologies (SPT) who have previously designed parks for the Winter X Games. SPT have combined the medium and large terrain parks at Alpine Meadows resulting in a mile-long park run. There are new jibs this season, including four new beginner boxes, two intermediate boxes and four new snowmaking pipe jibs. There are plenty of natural hits too such as the Hotwheels gully and Kangaroo gully.
+
+                          This year this 'best snowboarding resort' became a Burton Learn to Ride Center (for adults) proving that it’s never too late to start shredding!
+                        </p>
+                        <h1 class="hidden">39</h1>
+                        <h1 class="hidden">-120</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s8" >
+                        <h1>Whistler Blackcomb</h1>
+                        <h3>Canada</h3>
+                         <p class="hidden">
+                          With such an abundance of choice this place easily takes the crown for the Glastonbury of ski resorts. And just like the mother of all festivals the Whistler/Blackcomb experience has something for all tastes and levels.
+
+                          Located in the Coast Mountains on the West Coast, the resort is made up of two side-by-side mountains, Whistler and Blackcomb. Blackcomb was among the first resorts in North America to welcome snowboarders and has been passionately committed to progressing the sport ever since.
+
+                          In terms of park terrain, there are 99 acres. Five diverse parks, some of which are further divided according to ability, have been designed with all the features a pro would train with – which they do here, regularly. There are jumps, spines, rails, jibs and there are smaller versions for those new to freestyle. If, in the style of Tom Burt, you’re after speed, the Nintendo Terrain Park will sort you out. Naturally, there’s an Olympic sized pipe, used by the top pipe athletes in the world, and a 15’’ mini-pipe.
+
+                          For the best fall-line riding on a powder day head for the mid-mountain on Blackcomb and ride the Jersey Cream Express or take hit runs off of the Crystal Chair until the alpine opens. Then, head over to the Glacier Express chair and get a few laps through Spanky’s Ladder. You can take the Peak 2 Peak gondola over to Whistler Mountain in the afternoon, and take the Peak Express chair to ride Peak to Creek, from the Peak of Whistler to the Creekside base, the longest intermediate run on the mountain.
+                        </p>
+                        <h1 class="hidden">50</h1>
+                        <h1 class="hidden">-122</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="s9" >
+                        <h1>Mt Baker</h1>
+                        <h3>Washington, USA</h3>
+                        <p class="hidden">
+                          If you want to ride hard, Mt Baker is quite simply epic, but après-ski heaven it is not. The reason for its reputation is this: dumps of snow, deep, untracked pow, superb downhill terrain (voted No.1 by OnTheSnow visitors), and a progressive open boundary policy. Add to that the diversity of its natural terrain – gullies, canyons, tree runs and hits – and you’ve got a true snowboarders’ mountain.
+
+                          Another reason for its immense popularity is that amid the commercialisation and hype of snowboarding the family-run resort has managed, to its credit, to preserve a grassroots feeling about the place. “Each February, top professionals like Tom Burt, Terje Haakonsen and Victoria Jealouse pass up the television exposure and big purses of mainstream contests elsewhere in the world just to compete in the Baker slalom and celebrate the simple and unsullied passion for riding that brought them to the hill in the first place,” says the NY Times.
+                        </p>
+                        <h1 class="hidden">48</h1>
+                        <h1 class="hidden">-121</h1>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+
+            <!--Skydiving Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                <div class="title-heading" id="skydiving">
+                      <br><br>
+                      <h1>Skydiving Destinations</h1>
+                      <p>Over the river and through the woods.</p>
+                </div>
+              
+                <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk0" >
+                        <h1>Palm Jumeirah</h1>
+                        <h3>Dubai</h3>
+                        <p class="hidden">
+                          Relative newcomer amid the leading drop zones in the world, Dubai has been catching up, namely by hosting one of the biggest annual international skydive championships, a competition sponsored by The Emirates Aerosport Federation (EAF) and Skydive Dubai. Unlike the other drop zones in this list, Dubai is a city jump. Here you fly over the Palm Jumeirah, the artificial archipelago made of reclaimed land jutting out from the city’s urban marina, where you’ll get a mind-blowing view of the Persian Gulf and the whole of Dubai.
+                        </p>
+                        <h1 class="hidden">25</h1>
+                        <h1 class="hidden">55</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk1" >
+                        <h1>Fox Glacier</h1>
+                        <h3>New Zealand</h3>
+                        <p class="hidden">
+                          There are a bounty of shockingly beautiful drop zones in New Zealand, a ground zero for extreme sports and arguably the top country in the world for skydiving, perhaps the most extreme sport of all. A consistent favorite here is Fox Glacier, an 8-mile-long glacier located in the remote Westland Tai Poutini National Park on the West Coast of New Zealand's South Island. As you free fall, knees in the breeze, marvel at the view of the wild coastline along the Tasman Sea and the snowy rugged peaks of the Southern Alps.
+                        </p>
+                        <h1 class="hidden">-43</h1>
+                        <h1 class="hidden">169</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk2" >
+                        <h1>Hawaii</h1>
+                        <h3>United States</h3>
+                        <p class="hidden">
+                          Many people will argue that the best place to skydive in all of Hawaii is Waialua — and that may be true — but you can make a case that the best place to skydive in all of the world, is anywhere in Hawaii. From the craggy colored coastlines and vast palm tree-lined valleys to secret swimming holes and awe-inspiring volcano sites, the views from 8,000 feet up are beyond spectacular. Whether you’re taking the leap from Oahu, Kauai, Honolulu or anywhere else, skydiving in Hawaii will give you memories that will last for a lifetime.
+                        </p>
+                        <h1 class="hidden">20</h1>
+                        <h1 class="hidden">-158</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk3" >
+                        <h1>Interlaken</h1>
+                        <h3>Switzerland</h3>
+                        <p class="hidden">
+                          With a long history as a hub for adventure sports, Interlaken continues to rank for many divers as one of the most scenic drop zones in Europe. With views of Italy, France, Germany and Austria stretching out past the snow-capped peaks of Jungfrau and the Matterhorn in the Alps, Interlaken skydiving is a thrill for beginners and experienced divers, too. "Barreling down on the Swiss Alps at near terminal velocity speeds is a ride I will never forget," says first-time diver, Andrew Price. And the dive operations here run as one would expect of Switzerland — as smoothly as a cuckoo clock.
+                        </p>
+                        <h1 class="hidden">46</h1>
+                        <h1 class="hidden">7</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk4" >
+                        <h1>North Wollongong Beach</h1>
+                        <h3>Australia</h3>
+                        <p class="hidden">
+                          Captain Ahab would never have believed one could whale watch from 1,400 feet in the air, but if he’d had the chance, I’m certain he’d have done it. Indeed, the feeling of seeing the world from a bird’s perspective is thrilling, and even more so when that view includes the shoreline of Sydney, Australia, with whales and dolphins frolicking in the deep blue waters. Offering both tandem and solo jumps, the dive centers in this area let you land on North Wollongong Beach itself -- so you could opt for a swim right after touchdown. Now that’s a good day, mate.
+                        </p>
+                        <h1 class="hidden">-34</h1>
+                        <h1 class="hidden">150</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk5" >
+                        <h1>Snohomish, Washington</h1>
+                        <h3>USA</h3>
+                        <p class="hidden">
+                          As you fall through the sky above Snohomish, Wash., your eyes might pop, but not from the winds that make a falling skydiver’s cheeks and lips flap in the breeze. No, your eyes will pop from the sheer glory of the 360-degree panoramic view that surrounds you, featuring Mt. Rainier and Mt. Baker in the Cascades Mountain Range and the green San Juan Islands. From mountain to sea, this drop zone is renowned for being one of the most gorgeous in the US.
+                        </p>
+                        <h1 class="hidden">47</h1>
+                        <h1 class="hidden">-122</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk6">
+                        <h1>Mount Everest</h1>
+                        <h3>Nepal</h3>
+                        <p class="hidden">
+                          Due to its elevation above sea level, Mount Everest is considered to be the world’s highest mountain. It also happens to be widely considered one of the world’s most spectacular spots for skydiving. Dropping out of a plane over the incredible snow-covered Himalayas in Nepal is a feeling unmatched by any jump in the world. If the ultimate adrenaline rush is what you crave, then free-falling past the world’s tallest mountain is definitely the skydiving adventure for you.
+                        </p>
+                        <h1 class="hidden">27</h1>
+                        <h1 class="hidden">86</h1>
+                      </div>
+                    </div>
+                     
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk7">
+                        <h1>Pattaya</h1>
+                        <h3>Thailand</h3>
+                         <p class="hidden">
+                          Reportedly the only full-time drop zone in Southeast Asia, the skydiving in Thailand’s Nong Kho Reservoir near Pattaya is an adventure traveler’s dream come true. With a hair-raising view of the western coast of Thailand, you fall into lush green fields to find a safe landing with support from this drop zone’s well-trained international staff. Located about one hour south of Bangkok, the dive center here has a shuttle to and from the backpacker haven of Khao San Road, so you can get back to Bangkok, if you must, in time for a celebratory post-dive curry and Thai massage.
+                        </p>
+                        <h1 class="hidden">12</h1>
+                        <h1 class="hidden">100</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="sk8">
+                        <h1>Moab</h1>
+                        <h3>Utah, USA</h3>
+                         <p class="hidden">
+                          In America, there are so many great places to skydive out west — let alone in the state of Utah — that it’s hard to narrow it down to just one favorite. But skydiving over the breathtaking Arches National Park in Moab stacks up just about as high as you can go. With massive sandstone arches, sensational scenic hiking trails and monstrous red-rock monoliths, there aren’t too many backdrops in the U.S. that are this picture perfect for an epic skydiving excursion.
+                        </p>
+                        <h1 class="hidden">38</h1>
+                        <h1 class="hidden">-109</h1>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+
+             <!--Fishing Section-->
+            <div class="tile-container">
+              <div class="destination-container">
+                <div class="title-heading" id="fishing">
+                      <br><br>
+                      <h1>Fishing Destinations</h1>
+                      <p>Over the river and through the woods.</p>
+                </div>
+              
+                <div class="activities-grid">
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f0" >
+                        <h1>Prince Edward Island/Nova Scotia</h1>
+                        <h3>Canada</h3>
+                        <p class="hidden">
+                         1,496: That's the weight of the all-tackle world-record bluefin tuna caught here in 1979. Many more weighing better than 1,000 pounds have been taken over the years, and the odds for a bluefin that size are higher off the Canadian Maritimes than anywhere else in the world (with fish commonly more than 800 pounds), as are your chances for the stand-up battle of a lifetime. Fishing is often very near port/land, often less than a mile run. Most boats are equipped with fighting chairs, but if you're a really hard-core stand-up kind of guy, bring it on. You'll fish live, chunked or whole fish for bait, often on kites. By law, this is a catch-and-release fishery; however, boats currently are allowed to keep one or two fish per season. Regulations for this controlled fishery are subject to change from year to year.
+                        </p>
+                        <h1 class="hidden">44</h1>
+                        <h1 class="hidden">-64</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f1" >
+                        <h1>Belize</h1>
+                        <h3></h3>
+                        <p class="hidden">
+                          Quite simply, it's hard to find a spot anywhere with greater numbers of willing bonefish, permit and tarpon; the odds of releasing at least one of each in a day are remarkably high. The chances for trophy-size fish, especially bones, are better elsewhere. But for numbers (schools of bones in the hundreds aren't uncommon), action (with bonefish known to be more aggressive than spooky) and slams, Belize is a great bet. The country zealously guards its extensive flats, which remain pristine. The only country in Central America where English is the primary language, Belize is just two or three hours from most southeastern U.S. cities. Many resorts and lodges cater to anglers; guides can range from local pangeros to veteran pros in top-notch flats skiffs.
+                        </p>
+                        <h1 class="hidden">17</h1>
+                        <h1 class="hidden">-88</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f2" >
+                        <h1>Malindi</h1>
+                        <h3>Kenya</h3>
+                        <p class="hidden">
+                         The waters off Malindi, on Kenya's central coast, offer one of the few places on the planet where anglers can realistically hope to accomplish a billfish royal slam, or even a fantasy slam. The latter (which has been done here a number of times) requires five different species of billfish in a day, and they're all here. In fact, someday, some angler off Kenya might go beyond a fantasy slam to catch the ultimate six species in a day: blue marlin, striped marlin, black marlin, sailfish, swordfish and shortbill spearfish. You can choose from among competent, experienced crews for offshore charters. Closer in, anglers can target giant trevally and other reef fishes, as well as nearshore pelagics. Several hotels in the Malindi/Watamu area offer accommodations, and resorts such as Hemingways also offer charters.
+                        </p>
+                        <h1 class="hidden">-3</h1>
+                        <h1 class="hidden">40</h1>
+                      </div>
+                    </div>
+
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f3" >
+                        <h1>Key West</h1>
+                        <h3>Florida</h3>
+                        <p class="hidden">
+                          Only anglers who have never visited Key West would need to ask. Key West serves as a gateway to the Dry Tortugas and sits in the middle of world-class fishing grounds, where blue water, reefs and flats all beckon enthusiasts. Few communities on the planet are more oriented to anglers and their needs, with a tremendous array of first-rate inshore guides and offshore charters as well as a variety of moorage options. At the same time, Key West offers an endless variety of seafood eateries, a great range of accommodations and, of course, bars of every kind and flavor; it's a party every night on famous Duval Street! Air Tran, Southwest and Delta fly into the Key West airport.
+                        </p>
+                        <h1 class="hidden">24</h1>
+                        <h1 class="hidden">-81</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f4" >
+                        <h1>Panama</h1>
+                        <h3></h3>
+                        <p class="hidden">
+                          Amazingly productive offshore seamounts and rugged coastline loaded with rocky headlands and nearshore reefs — that's why. Schools of tuna patrol iconic seamounts such as Zane Grey Bank and Hannibal Bank, where they can be seen frothing the surface while crashing bait, often mixed in with vast schools of dolphin (the mammal). Mahi and wahoo will nail poppers, especially around floating logs. Topwater predators that lurk closer to shore include huge cubera snapper, roosterfish, bluefin trevally, large sierra and other game fish. A mere two-and-a-half hours from Miami and served by many airlines, this tourist-friendly country is a snap to fly into, and the Pacific coast offers many excellent fishing resorts.
+                        </p>
+                        <h1 class="hidden">8</h1>
+                        <h1 class="hidden">-80</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f5" >
+                        <h1>Louisiana</h1>
+                        <h3>Mississippi Marshes</h3>
+                        <p class="hidden">
+                          Endless shallow-water habitat makes up the vast coastal marshes that stretch from western Mississippi into Louisiana — just the sort of habitat that red drum love. In other words, these marshes offer a huge population of one of the world's superb game fish for fly-rodders, all in a vast and fabulous sight-casting milieu. Of course there are various other species on hand as well (such as seatrout and black drum), but with aggressive, hard-fighting reds often in the 15- to 35-pound range, they remain the top target. Nor is there anything difficult about getting here: The marsh begins an hour or two from New Orleans.
+                        </p>
+                        <h1 class="hidden">39</h1>
+                        <h1 class="hidden">-91</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f6">
+                        <h1>Bermuda</h1>
+                        <h3></h3>
+                        <p class="hidden">
+                          Any list of top spots for big blue marlin has to include Bermuda, which has proved its bona fides over many decades. No country has won the one-day, global World Cup Blue Marlin Championship as often as Bermuda (eight times in 27 years), including the two largest fish ever caught in that event (1,195 and 1,189 pounds). The largest blue taken here (so far): 1,352 pounds. Beyond blues are white marlin, wahoo and yellowfin tuna. The quick-hop trip (two or three hours from the East Coast) from many U.S. gateway cities via American, Continental, Delta, Jet Blue, U.S. Air and others adds to the destination's appeal. So do an experienced fleet and the chance to spend time in a very foreign but very safe, civilized and clean country with amazing beaches, fabulous diving, golfing, restaurants and, well, you get the idea.
+                        </p>
+                        <h1 class="hidden">32</h1>
+                        <h1 class="hidden">-64</h1>
+                      </div>
+                    </div>
+                     
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f7">
+                        <h1>The Bahamas</h1>
+                        <h3></h3>
+                         <p class="hidden">
+                          No country close to the United States has as great an area of flats or bonefish as large, on the average, as the Bahamas. While it's hard to go wrong on any flat around these islands, Grand Bahamas flats and the shallows around Andros, Abaco, and Long islands hold great numbers of fish. Besides bones and permit, even tarpon might get in the act along the west side of Andros. Not only are the Bahamas close by, but English is the primary language. Choose from an array of fishing lodges and resorts that cater to anglers with guides who know how to pole their flats skiffs to put fishermen, whether they're throwing with a fly rod or spinning gear, into big schools of fish.
+                        </p>
+                        <h1 class="hidden">24</h1>
+                        <h1 class="hidden">-76</h1>
+                      </div>
+                    </div>
+
+                    <div class="activities-grid-item">
+                      <div class="image"  id="f8">
+                        <h1>Cabo San Lucas</h1>
+                        <h3>Mexico</h3>
+                         <p class="hidden">
+                          In many regions, fishing serious blue water means a run of 10 or 20 or even 40 miles before lines go in. On a rough day, you pay your dues at the outset. How does a run of a couple of miles sound? That's about all you need to start targeting open-ocean pelagics out of the Cabo San Lucas area; many bragging-size marlin, dorado, sails and wahoo have been taken a short distance from shore here, where Pacific Ocean waters mix with the lower Sea of Cortez. And some of the prime banks such as Golden Gate and Gordo can require not much more than a run of 10 miles, depending on your point of origin.
+                        </p>
+                        <h1 class="hidden">22</h1>
+                        <h1 class="hidden">-109</h1>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+            
+        </section>
+
+        <footer>
+        <p>&copy; 2020 Tours. All Rights Reserved</p>
+    </footer>
+
+    </main>
+
+    
+
+<script type="text/javascript" src="javascript/destination-script.js"></script>
+
+
+</body>
+
+</html>

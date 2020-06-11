@@ -1,0 +1,357 @@
+DENIS ÇERRI
+UNIVERSITETI: ALEKSANDER XHUVANI
+DEGA: TEKNOLOGJI INFORMACIONI
+VITI: 2
+LENDA: TEKNOLOGJI SISTEME WEB
+PROJEKT TSW: WEBSITE
+TEMA: AGJENSI UDHETIMESH
+
+Bazuar ne: 
+- onthegrid.city per gridin e destinacioneve
+- Responsive Website by Julio Codes per design e navbar dhe marrja e linkeve te Fonteve Alrdich, Nunito dhe ikonave ion.
+- Shembuj te tjere te treguar me foto ne internet
+
+Mjetet e perdorura: Sublime Text 3, Photoshop, getwaves.io, ion-icons.
+Faqe ndihmese: W3Schools
+Data e fillimit te projektit: 30 Prill 2020
+Koha e zhvillimit te projektit : 4 jave
+
+Permbajtje:
+-Elemente te perbashket midis faqeve
+-Index
+-Destinations
+-Booking
+-About
+
+
+
+
+1. Elemente te perbashket midis faqeve
+
+- Navbar
+Navbar eshte sticky, qendron ne maje te ekranit pavaresisht se ku je ne faqe. Kur bejme scroll krijohet nje tranzicion i cili
+zvogelon madhesine e ikones, hapesiren lart dhe poshte midis elementeve te navbarit dhe ndryshon ngjyren e background
+ne te zeze. Kjo pasi pjesa me e madhe e websitit eshte e bardhe dhe deshiroja qe elementet te ishin te bardha ne te njejten kohe.
+Keto ndryshime behen vetem ne versionin e kompjuterit, tabletit.
+Ne menyre qe ikona dhe linket ne navbar jane ne cep te ekranit, behet me ane te justify-content: space-between;
+
+Ne versionin e celulareve ku perfshihen paisje me gjeresi me te vogel se 700, elementet e navbar jane te fshehur 
+dhe dalin ne ekran me ane te nje butoni te vendosur ne cep ne te djathte. Kete pjese nuk e kam marre ne klase 
+po kisha deshire ta vendosja dhe ane te ndihmes arrita ta bej.
+
+-Container
+Gati te gjithe elementet e website jane brenda divit Container i cili ka nje limit sa i gjere ai mund te jete.
+Navbar ben pjese ne kete div gjithashtu, por kur behet tranzicioni. Ngjyra e background del nga div container duke mbuluar
+te gjithe hapesiren 100%.
+
+-Go Up Button
+Nje buton icili ka z-index me te madh ne website qe e lejon te qendroje siper cdo lloj divi. Ky buton sic tregohet dhe nga 
+emri sherben per te bere scroll ne fillim te faqes kur klikohet.
+Butoni ka display = "none" fillimisht por pasi nje vlere pixels qe e vendosim vete ne funksionin scrollFunction();
+i japim vlere display = "block" per ta bere te dukur. Ne te njejtin funksion behen dhe ndryshimet ne navbar te 
+permbendura me larte. Kemi nje kusht i cili kontrollon nese jemi ne maje te faqes. Nese po, i kthejme style e navbar dhe logo
+sic ishin ne fillim.
+Qe scroll te mos jete i menjehershem, shtojme tek html scroll-behaviour: smooth.
+
+Cdo faqe ka background-color te veten per stilizim, duke i pershtatur fotos ne fillim.
+
+
+-Traveller dhe Main Message
+ Nje Div i cili ka nje background-image si cover dhe nje wave poshte tij. Wave-t jane marre nga nje website qe i gjeneron sipas deshires. Ky div nuk eshte brenda container.
+ Cdo faqe ka foto e vete. Fotot jane frymezuar nga loja FireWatch.
+ Ne versionet e meparshme, faqja kishte foto te destinacioneve reale por vendosa te zgjidhja nje design me te thjeshte
+ dhe materialistik.
+
+-Footer
+Div i thjeshte qe qendron ne fund te faqes me nje mezash Copyright 	
+
+
+2. INDEX - Faqe Kryesore
+
+-Kategorite
+6 Div te vendosur ne grid njera pas tjetres. Display e kane flex pasi ato shkojne poshte kur nuk ka hapesire ne ekran
+Krijohet mundesi per te punuar ne smartphone gjithashtu. Background-image, disa jane frymezuar nga FireWatch, disa qe nuk
+mund te gjeheshin arrita te merrja te ngjashme me te njejten design.
+Pervec nje Header dhe paragraf, kemi dhe nje ION-ICON per stilizim te kartave.
+Kur klikojme kudo ne div, na ridirekton ne divin e pershtatshem te kategorise.
+Poshte gridit kemi te njejten wave por te permbysur dhe te kthyer ne anen tjeter.
+
+-Testimonial
+Div i ngjashem me Traveller kur del jashte container. Ne krahasim me te ketu background-image ka position fixed e cila
+ben foton te mos levize gjate scroll. Kemi nje ION-ICON si te kategorite, nje paragraf. Fotoja ka nje border radius
+100% e cila e kthen foton ne rreth. Shtohet dhe nje border me te njejten ngjyre si ikona me siper.
+
+-Kartat e Skuadres
+3 Div te ngjashme me kategorite. Display flex. Ndryshe nga keto. Kemi shtuar nje  transform kur i bejme hover duke e bere
+karten te zmadhohet me 1.05. Ky zmadhim behet vetem ne versionin desktop. Pjesetaret jane thjeshte aktore sa per reference.
+
+-Foto
+Kjo collage ishte e perbere nga foto te tjera por me ane te photoshop vendosa foto me design te ngjashem me ate qe deshiroja.
+
+-Buton
+Ne fund eshte thjesht nje buton me te njejtat cilesi si butoni ne fillim te faqes i cili te con tek faqja booking.
+
+
+
+
+3. DESTINATIONS
+
+(faqja me e komplikuar e projektit pasi te tjerat nuk kishin shume nevoje per javascript pervec disa gjerave te vogla)
+
+Ne fillim ne vend te butonit qe te con ne booking. Kemi butona qe te cojne ne divet e kategorive.
+Nje nga arsyet perse krijova goUpBtn ishte pasi kisha vendosur shume destinacione dhe kategori dhe scroll ishte nje harxhim kohe.
+Sidomos ne ekrane me te vegjel.
+
+-Destination Grid
+Gridi eshte i njejte me gridin ne faqen indeks. Ketu kemi padding me te vogel. Eshte krijuar nje div i ri i quajtur
+destinations-container pasi container normal nuk mund te mbante shume foto ne nje rresht. Une mund te zvogeloja fotot
+por nuk do te dukeshin aq bukur.
+Nje element i gridit eshte activities-grid-item. Krijova nje klase tjeter brenda tij. Kjo sepse:
+Doja te implementoja nje transformim te divit kur behet hover, por rezulton ne te gjithe katrorin te levizi kur dale para 
+ose pas katroreve te tjere duke u varur nga z-index.
+
+Me krijimin e divit extra image, transformohet vetem ai div brenda activities-grid-item. Provova te fusja vetem foton ne 
+divin image por fotoja nuk zen te gjithe hapesiren, duke krijuar bug te tjera. E lashe qe te rrotullohej bashke me headerat.
+
+Cdo klase image ka id e vete e cila tregon cfare kategorie eshte dhe ne cfare vendi eshte. Po ashtu ka dhe 3 elemente te tjere
+te fshehur, te cilet jane nje paragraf pershkrues dhe 2 koordinata. Keto do te na duhen me vone.
+
+Ne versionin celular jane zvogeluar divet e gridit dhe madhesia e headerit h1.
+
+Kur klikojme ne nje nga fotot, na shfaqet nje div i ri i madh sa ekrani siper diveve qe kishim.
+Perpara se vazhdojme me kete div (hidden-acticle), dua te permend nje pjese kodi
+
+var elements = document.querySelectorAll(".image");
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", function() {
+   article(this.id);
+  });
+}
+
+me ane te ketij kodi, nuk kemi perse te vendosim nje onclick="article(this.id)"  ne cdo image, duke ditur qe kjo faqe ka 
+shume prej tyre por dhe nje lehtesi nese duam te shtojme destinacione te reja/ kategori.
+
+
+Ky div (hidden-article) fillimisht eshte i fshehur dhe nuk ka te dhena.
+Sa klikojme therritet funksioni article i cili merr si parameter id e divit i cili u klikua.
+Me kete klikim duam qe te gjithe elementet e fotos te vogel te zmadhohen ne nje ekran me te madh duke shfaqur me shume info.
+
+Ruajme innerHTML te elementeve te divit qe u klikua dhe i japim keto vlera elementeve te hidden article.
+
+Ndryshe nga elementet e tjere, menyra per te marre src e fotos ne background te divit ishte ndryshe pasi ato ishin deklaruar
+ne css dhe jo ne html. Kjo per lehtesi editimi ne te ardhmen.
+
+fotoja merrej me ane te ketij kodi:
+
+
+  var imageID = document.getElementById(articleID);
+  var image = window.getComputedStyle(imageID);
+  var imagecss = image.getPropertyValue('background-image');
+
+
+
+
+
+Kete artikull i japim display block per ta bere te dukshem.
+Divin main ( kur ndodhet gjithcka pervec nabar) i japim display none dhe background-color black. Ngjyra me shume duhet si
+ngjyre background per paragrafin.
+
+Pas ketyre na duhen koordinatat per harten ne te djathte te faqes (ose ne fund te faqes nese jemi ne smartphone).
+Div hidden-article ka dhe nje div tjeter map-section kur vendoset harta.
+Nje menyre me e thjeshte per te vendosur harten ishte ta mirrje kodin te gatshem nga google maps dhe e kopjojme per
+cdo destinacion dhe thjesht e bejme te dukshem kur klikojme divin POR, kjo do te na kushtonte shume hapesire ne kod
+dhe perseritje kodi e cila nuk eshte praktike e mire.
+
+Keshtu mendova qe do te ishte nje ide me e mire te kishim nje div harte te perbashket dhe kur therrasim nje destinacion te
+caktuar ne thjesht i ndryshojme koordinatat. Cdo div ka koordinatat te vedosora ne dy headera te fshehur.
+
+I marrim keto innerHTML to headerave dhe i kthejme ne integer.
+pastaj therrasim funksionin e hartes dhe i japim keto koordinata.
+Harta donte nje key per te hequr alert(This page cant load 	google maps correctly) por meqe ky eshte thjesht nje projekt
+dhe jo website real nuk ishte nevoja per tu regjistruar per nje key.
+
+ruajme id e artikullit ku jemi tani ne nje variable checkButton.
+
+Tani qe artikulli u popullua. Jane shtuar 3 butona ne te. Nje ben daljen nga artikulli i quajtur article-btn. 
+Kur klikohet therritet i njejti funksion article.
+Krijojme nje kusht ne fillim. Nese id e dhene eshte e butonit article-btn dhe e jo nje nga divit, atehere
+e fshehim artikullin. i japim display block main. background color te main e kthejme sic ishte ne fillim.
+Perdorim variablen checkButton qe ruajtem me pare. Me ane te kesaj, ekrani ben scroll tek divi qe klikuam 
+ne fillim duke e bere ne dijeni perdoruesin pozicionin ku ishin.
+
+Dy butonat e tjere jane next dhe previous. Sherbejne per te kaluar midis destinacioneve pa pasur nevojen
+te dalim dhe te klikojme div tjeter. Keta bashke me butonin mbylles kane simbole nje ION-ICON.
+Kur klikojme nje nga butonat therritet po i njejti funksion.
+Njesoj me butonin mbylles krijome kushte per te 2.
+Nese klikojme previous atehere krijojme 2 variabla nextIDTag dhe nextIDNr.
+ne prevIDTag marrim pjesen e tekstit te ID se artikullit ku jemi tani.
+Kete ID e kemi marre kur u thirr div ne fillim i ruajtur ne variablen currentArticle.
+ne prevIDNr marrim pjesen e numrit te ID se artikullit.
+
+
+Pastaj therrasim funksionin article me id qe perfshin tekstin (h ose f varet nga kategoria). Teksti duhet pasi
+duam te kalojme ne divin para ardhes te te njejtit kategori. ne id futim numrin por 1 me te vogel.
+
+E njejta gje ndodh me ne butonin next. Ketu numri eshte 1 me i madh. Mund te qelloje qe jemi ne divin e fundit 
+te kategorise. Krijojme nje try-catch, nese kapim ndonje error me thirrjen e ketij funksioni atehere thjeshte e zhdukim
+butonin next pasi nuk ka me div ne kete kategori.
+
+Ky try catch nuk behet per previous pasi ne e dime se kush element eshte i pari.
+Ajo ID qe ka numrin 0. KUJDES!!! Ka shume rendesi qe te marrim te gjithe numrin per te kontrolluar nese eshte 0 apo jo.
+Nese marrim thjesht elementin e fundit dhe e kontrollojme nese eshte 0 atehere mund te fshehim butonin next tek
+destinacioni 10 20 etj.
+Ndodhet dhe nje funksion qe merr si input klikimin e butonave ne tastiere. Mund te kalojme midis artikujve
+me ane te shigjetave dhe mund te dalim me esc. Behet kontroll nese butonat kane klasen hidden pasi ne rastin
+e tastieres ne mund te klikojme butonin edhe nese nuk e shohim ne ekran, duke rezultuar ne dukjen e tij
+ne rastin kur nuk duam. Nese butonat jane te fshehur atehere nuk kemi pse te therrasim funksionin e 
+artikullit kur shtypim butonin.
+Nese jemi ne faqe dhe jo brenda artikullit dhe klikojme esc, butoni kryen rolin e goUpBtn.
+Kjo funksionon dhe ne faqet e tjera.
+
+
+Ne versionin smartphone deshiroja te krijoja mundesine per te bere swipe midis destinacioneve por per shkak te 
+pa aftesise per te arritur kete e lashe me butona si ne versionin desktop.
+
+
+
+
+
+3. BOOKING
+Kjo faqe sherben per te treguar opsionet e cmimeve dhe nje form ne fund per tu abonuar.
+Pas fotos kryesore kemi Div pricingSection. I japim pozicion relative pasi duam ta ngrejme lart me 200px.
+200 px besoj ishte lartesia e duhur. Me larte ne ekrane te ngushte horizontalisht do te mbulonte tekstin kryesor ne foto.
+Shtojme border radius per cepa te rrumbullaket pasi nje div katror nuk do dukej mire siper nje wave.
+
+Gridi i cmimeve eshte ngritur pak gjithashtu por meqe vetem 1 mund te kete backgroundColor gjate gjithe kohes
+ato duket sikur jane brenda divit pricingSection.
+
+Ne te jane 2 dive kur nje (TITLE) pak a shume sherben nje element shtese i gridit te kartave te cmimeve. E shtova pasi 
+me pelqente qe kartat te mos qendronin ne qender. Per te arritur kete, i japim display: grid dhe vleren
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+te njejte me gridin e kartave. Ne versionin per celulare. display behet block. Keshtu gridi i cmimeve shkon poshte tij. pastaj 
+i japim gjeresi 100% qe te duket si nje titull i madh siper tyre.
+Kartat kur klikohen therritet funksioni activePrice me id e divit. ID-te jane starterCard, adventurerCard, explorerCard.
+id thjesht starter adventurer dhe explorer jane perdorur ne div me poshte. Ne (activePrice();) marrim id e divit, h1 dhe h2.
+Kthejme h1 dhe h2 ne te bardhe. I shtojme classen me te njejtin emer si ID e cila ka backgroundColor. Mund dhe te shtoja
+backgroundColor te id qe kishte por zgjodha kete menyre. Tek karta tjeter e heqim klasen duke hequr backgroundColor, po ashtu
+kthejme h1 dhe h2 ne ngjyrat sic ishin ne fillim (te zeza) ose nese duam te bejme ndryshime, skemi pse ndryshojme kete rresht 
+kodi. Eshte vendosur nje kusht i cili kontrollon nese ne klikojme te njejten karte. Nese nuk e vendosim kete kusht atehere
+ne fund karta e klikuar i hiqet backgroundColor dhe h1, h2. Kete nuk e duam. Kushti plotesohet vetem nese karta qe klikohet
+eshte tjeter nga ajo qe eshte per momentin. Kete e bejme duke ruajtur karten qe eshte aktive per momentin ne currentCard
+dhe e krahasojme me ID qe na ka ardhur.
+
+poshte Div title dhe kartave kemi disa rreshta div qe kane nje header qe qendron ne te majte dhe nje liste me 
+flex-direction : row, (si navbar). I japim justify-items:space between duke bere te dhenat te qendrojne poshte kartave.
+I japim elementeve te listave ngjyra sipas kategorise. Kjo arrihet me nth-child
+I pari eshte per starter, dyti per adventurer dhe treti per explorer.
+Kur hapim faqen e booking automatikisht, i japim nje div ngjyre gri dhe tjetrit e lejme te bardhe. Ekzekutohet me nje 
+cikel for te thjeshte.
+
+Me pas kemi FAQs. Kur klikojme divet e pyetjeve i japim pyetjes klasen active ku e len te qendroje ne ngjyren qe ka kur
+i bejme hover. Me pas i shtojme klasen show pasi ishte e padukshme para klikimit. Pyetja ka dhe nje logo e cila ndryshon kur
+klikohet ne nje minus.
+
+(Emrat e kartave, cmimet dhe te dhena te tjera jane bere thjesht per shfaqje.)
+
+
+
+Ne fund ndodhet pjesa e booking. Perbehet nga wave dhe divi poshte. Keto lidhen me kartat ne fillim. Ne fund te activePrice
+therritet bookingColor. Kjo ben qe divi dhe wave te kete backgroundColor te njejte me karten e klikuar. Ne rastin e wave
+jane marre 3 wave te ndryshme me design ndryshe nga njera tjetra per secilen kategori. Ne divit e booking ndodhen 3 butona te 
+cilet bejne te njejten gje si kartat, kur klikohen therrasin bookingColor per te ndryshuar ngjyrat.
+Ne fund te bookingColor therrasim activePrice. 
+Ne fillim duket se kjo do te coje ne nje cikel te pafundem. Jane vendosur kushte per ta parandaluar. Arsyeja pse therritet 
+perseri activePrice eshte se mbase ne nuk klikojme kartat siper por nje nga butonat poshte. Butonat e kryejne punen per divin
+ne fund por nese bejme scroll siper karta nuk ka ndryshuar. Keshtu duhet thirrur metoda. ID qe kemi marre thjesht i shtojme 
+Card ne fund dhe puna kryhet. Tani per te parandaluar ciklin e pafundem duhen kushte per te dyja metodat.
+
+Kushti ne activePrice:
+ - Nese ngjyra e divit ne fund eshte njesoj me karten qe u klikua atehere nuk kemi pse ta therrasim metoden, ne te kundert
+ e therrasim.
+
+
+Kushti ne bookingColor:
+ - Ne activePrice kemi variablen currentCard qe na duheshe per te kontrolluar nese klikojme te njejten karte. ID qe marrim nga
+ bookingColor i shtojme Card, nese kjo id qe krijuam eshte e njejte me currentCard atehere nuk kemi pse te bejme ndryshime.
+
+
+bookingColor pervec activePrice therret dhe metoden destinations. Ne divin e booking kemi lista qe permbajne destinacionet
+qe jane ne faqen Destinations.
+Le te devijojme pak. 
+Meqe kemi shume destinacione, atehere ti vendosnim ato nje nga nje ne html do te ishte humbje kohe dhe papasterti kodi.
+Ne vend te asaj cdo kategori eshte nje vektor me destinacionet ne te. Sa here qe hapet faqja Booking therritet metoda
+addDestinations();
+Ketu marrim elementet e vektoreve dhe i vendosim ne listat e caktuara.
+
+Kthehemi tek therritja e destinations(); Kur bejme ndryshime vizuale te divit, kemi per te bere dhe ndryshime logjike.
+Ne FAQ dhe te kartat siper krijova ca rregulla te cilat limitojne disa kategori.
+Ne Starter per shembull vetem 3 kategori jane te vlefshme. Keshtu nese kjo kategori klikohet atehere kategorite qe nuk 
+lejohen i shtojme klasen hidden. Kurse kur klikohen kategorite e tjera heqim hidden nga ato.
+
+Une vendosa dhe disa rregulla te tjera, per shembull disa kategori lejohen vetem disa destinacione. Per momentin
+vetem kategorite jane limituar. Meqe eshte thjesht nje projekt shkollor nuk shkova aq thelle.
+Per te limituar vendet atehere duhet te krijojme array te vecante per secilen kategori
+dhe kur bejme fshehjet e kategorive. Duhet qe te fshijme te gjithe opsionet qe jane per momentin dhe te vendosen 
+opsionet e reja. Keshtu i bie te krijojme dyfishin e cikleve for. Nje grup per heqje dhe nje tjeter per vendosje.
+Ose mund te bejme kushte qe kontrollojne nese disa elemente qe na duhen jane ne liste dhe nuk kemi pse i heqim.
+Eshte e mundur por isha i limituar nga klasat e tjera dhe nga koha.
+Ne fillim kartat ishin thjesht dropdownlist. Ne kete version final, zgjedhja shoqerohet me nje foto si reference.
+Sa here qe bejme ndryshime ne liste, del fotoja e lidhur me emrin. Kur zgjedhim cmimin qe limiton disa
+kategori, ato zvogelohen dhe i ulet ndricimi. Fotoja i kthehet sic ishte dhe indeksi i zgjedhjes cohet ne fillim.
+Kjo behet pasi ne mund te zgjedhim ne nje nga vendet e ndaluara dhe pastaj vendosim te shkojme ne nje cmim me te ulet.
+Nese nuk behen ndryshime atehere vendi i zgjedhur ne vendin e ndaluar do te llogaritet per te dale ne alertin ne fund.
+Ndryshimi i fotove behet ne kete menyre:
+Krijojme array me emrat e fotove.
+zbulojme cilen kategori klikuam.
+japim url e background the futim emrin e fotos e cila ka te njejten indeks me ate te dropdown list.
+Kur klikojme ikonen e kategorise, ne con ne faqen e Destinations
+
+Form funksionon sic duhet. Nese data e check out eshte para check in nuk lejohet.
+Duhen vendosur te gjithe elementet per tu aprovuar. Nese po del thjesht nje alert qe te pershendet me emrin mbiemrin dhe 
+emailin qe ke vendosur. Tregohet plani qe ke zgjedhur dhe destinacionet qe ke zgjedhur.
+
+
+
+
+
+4. ABOUT
+
+Ne fillim div i ngjashme me ate te pricing, te ngritur pak. Ne te eshte nje foto me minimal design. Kishte watermark
+por me photoshop e hoqa. Siper fotos ndodhet nje tekst pershkrues dhe buton. Butoni ka te njejta te dhena si butonat e
+book now ne faqen e pare por ne ngjyre te ndryshuar. Ne versionin celular teksti thjesht u zvogelua duke lejuar qendrimin 
+e tij ne pjesen e bardhe te fotos. Divi sigurisht eshte brenda container.
+Meqe divi eshte ngritur me pozicionimin relativ, ngel hapesire bosh midis ketij divi dhe divit qe vjen me poshte.
+Per te hequr kete hapesire, i japim divit qe levizem siper nje margin negativ me vleren sa e leviz siper.
+
+Me poshte kemi nje shirit qe nuk eshte brenda container me ngjyre si faqja. brenda tij 3 karta. Pak a shume si kartat e 
+pricings por katore. backgroundColor i bardhe, te ngritura pak duke bere fotot qe kane siper te dalin nga shiriti manushaq.
+Nuk munda te gjeja 3 foto te ngjashme por besoj se nuk ben problem.
+butonat poshte jane thjesht ikona ion, te ngjashme me butonat e artikullit te fshehur te mbuluara me nga nje href. Kur i bejme
+hover ndryshojne ngjyren si shiriti.
+
+Poshte kemi nje foto qe cila nuk Eshte pjese e container por mbulon nje pjese te ekranit. Ne versionin moblile mbulon 90%
+dhe harta vendoset poshte..
+
+Poshte e njejta gje por te dy divet jane brenda container.
+
+Form funksionon kompletisht. Duhen te plotesohen te gjithe elementet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,706 @@
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	font-family: 'Nunido', sans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+p{
+	font-size: 16px;
+}
+
+img{
+	width:100%;
+	max-width: 100%;
+	height:auto;
+}
+
+section{
+	padding: 5rem 0;
+}
+
+
+
+/*header*/
+header{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: all 250ms ease-in-out;
+}
+
+.container{
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+nav{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+
+
+.menu-icons i{
+	font-size: 35px;
+	color: white;
+	cursor: pointer;
+}
+
+.close i{
+ 	color: #eb648c;
+}
+
+
+
+
+#goUpBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 10px; 
+  z-index: 5000; 
+  border: none; 
+  outline: none; 
+  background-color: #FF6400; 
+  color: black; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50%; 
+  font-size: 18px;
+}
+
+#goUpBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav-brand{
+	width: 20px;
+	transition: all 250ms ease-in-out;
+}
+
+
+.nav-list{
+	width: 250px;
+	height: 100vh;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	right: -260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+	transition: all 650ms ease-in-out;
+}
+
+
+.nav-list.active{
+	right: 0;
+
+}
+
+.close{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+}
+
+.nav-item{
+	margin: 15px 0;
+}
+
+.nav-link{
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgba(0,0,0,.7);
+}
+
+/*Fotoja kryesore*/
+.traveller{
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2) , rgba(0, 0, 0, 0.2) ), url("../images/header-bg.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.traveller:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 47px;
+	background: url("../images/wave-small.png") center no-repeat;
+	background-size: cover;
+}
+
+.main-message{
+	width: 100%;
+	max-width: 1000px;
+	position: absolute;
+	top: 0;
+	bottom: 50%;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+	color: #fafafa;
+	text-transform: uppercase;
+	transform: translateY(20%);
+	text-align: center;
+}
+
+
+.main-message h3{
+	font-size: 16px;
+}
+
+.main-message h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 40px;
+	margin: 10px 0;
+
+}
+
+.main-message p{
+	text-transform: capitalize;
+}
+
+.btn{
+	background-color: #eb648c;
+	border-radius: 20px;
+	color: #fafafa;
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	transition: background-color 650ms;
+}
+
+.btn:hover{
+	background-color: white;
+	color: black;
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+	transition: all .5s;
+}
+
+
+/*Experience the outdoors*/
+.experience-outdoors{
+	padding: 0;
+}
+
+.title-heading{
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 100px;
+	
+}
+
+.title-heading h3{
+	font-size: 14px;
+}
+
+.title-heading h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 20px;
+	margin: 5px 0 10px;
+}
+
+.title-heading p{
+	text-transform: lowercase;
+}
+
+/*Responsive grid*/
+.activities-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 25px;
+
+}
+
+.activities-grid-item{
+	height: 400px;
+	padding: 50px;
+	color: #fafafa;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1;
+	border-radius: 10px;
+
+}
+
+
+.activities-grid-item::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.2) 0% , rgba(0,0,0,0.2) 100%);
+	z-index: -1;
+	border-radius: 10px;
+}
+
+.rafting{
+	background: url("../images/river-rafting.jpg") center no-repeat;
+}
+
+
+.hiking{
+	background: url("../images/hiking.jpg") center no-repeat;
+}
+
+.camping{
+	background: url("../images/camping.jpg") center no-repeat;
+}
+
+.snowboarding{
+	background: url("../images/snowboarding.jpg") center no-repeat;
+}
+
+.skydiving{
+	background: url("../images/skydiving.jpg") center no-repeat;
+}
+
+.fishing{
+	background: url("../images/fishing.jpg") center no-repeat;
+}
+
+.activities-grid-item i{
+	font-size: 40px;
+	color: #eb648c;
+}
+
+.activities-grid-item h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+/*Testimonials*/
+.testimonials{
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(rgba(0,0,0,0.2) 0% , rgba(0,0,0,0.2) 100%),
+	 url("../images/testimonial.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials::before{
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 47px;
+	background: url("../images/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+.testimonial{
+	width: 100%;
+	color: #fafafa;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.testimonial-text-box{
+	padding: 0 15px;
+	margin-bottom: 20px;
+	position: relative;
+	top: 80px;
+}
+
+.testimonial-text-box i{
+	position: absolute;
+	top: -80px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 80px;
+	color: #eb648c;
+	opacity: .5;
+	z-index: -1;
+}
+
+.testimonial-costumer{
+	position: relative;
+	top: 80px;
+}
+
+.testimonial-costumer img{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	border: 3px solid #eb648c;
+}
+
+/*Begin Adventures*/
+.adventure-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 25px;
+	margin-bottom: 20px;
+}
+
+.adventure-grid p{
+	color: rgba(0,0,0,0.7);
+}
+
+footer{
+	padding: 25px 0;
+	background-color: black;
+	text-align: center;
+	color: white;
+
+}
+
+
+.heading{
+	text-transform: uppercase;
+	font-size: 35px;
+	letter-spacing: 10px;
+	margin-bottom: 50px;
+	text-align: center;
+	justify-content: center;
+	color: #333;
+	position: relative;
+}
+
+.heading::after{
+	content: "";
+	width: 100px;
+	height: 8px;
+	background-color: #45e19f;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	transform: translateX(-50%);
+	border-radius: 20px;
+}
+
+.card-wrapper{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+
+}
+
+.card{
+	width: 100%;
+	background-color: #ebeef8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+	box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+	border-radius: 30px;
+}
+
+.card .card img{
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.card-img{
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.profile-img{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-top: -110px;
+	z-index: 999;
+	border: 10px solid #ebeef8;
+
+}
+
+.card h1{
+	font-size: 25px;
+	color: #333;
+	margin: 15px 0;
+}
+
+.job-title{
+	color: #777;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.about{
+	font-size: 15px;
+	margin: 15px 0;
+	font-style: italic;
+	text-align: center;
+	color: #333;
+}
+
+.card .btn{
+	padding: 10px 25px;
+	background-color: #45e19f;
+	border-radius: 20px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: #eee;
+	font-size: 14px; 
+	transition: all .5s;
+}
+
+.card .btn:hover{
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+
+}
+
+.card .btn:active{
+	transform: translateY(0);
+	box-shadow: none;
+	
+}
+
+.social-media{
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 0;
+	margin-top: 15px;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+.social-media i{
+	font-size: 30px;
+	
+}
+
+.fa-facebook-square{
+	color: #3b5999;
+}
+
+.fa-twitter-square{
+	color: #55acee;
+}
+
+.fa-instagram{
+	color: #e6683c;
+}
+
+.fa-reddit-square{
+	color: #ff4500;
+}
+
+.fa-discord{
+	color: #7289da;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-reddit-square:hover,
+.fa-discord:hover{
+	color: #45e19f;
+}
+
+
+/*Media Queries*/
+@media screen and (min-width: 350px){
+	
+	.main-message{
+		transform: translateY(40%);
+	}
+
+
+}
+
+
+@media screen and (min-width: 470px){
+	
+	.traveller::before{
+		height: 94px;
+		background: url("../images/wave-medium.png");
+		background-size: cover;
+	}
+
+	.testimonials::before{
+		height: 94px;
+		background: url("../images/wave-medium-reversed.png");
+		background-size: cover;
+	}
+
+
+}
+
+
+@media screen and (min-width: 700px){
+	header{
+		height: 80px;
+	}
+	.nav-brand{
+		width: 35px;
+	}
+
+	.nav-list{
+		width: initial;
+		height: initial;
+		background-color: transparent;
+		position: initial;
+		top: initial;
+		right: initial;
+		flex-direction: row;
+		transition: initial;
+	}
+
+	.nav-item{
+		margin: 0 25px;
+	}
+
+	.nav-link,
+	.current{
+		color: #fafafa;
+		position: relative;
+		font-size: 13px;
+	}
+
+	.nav-link::before,
+	.current::before{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		background-color: #eb648c;
+		width: 100%;
+		height: 2px;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 600ms;
+	}
+
+	.current::before{
+		transform: scaleX(1);
+	}
+
+	.nav-link:hover::before{
+		transform: scaleX(1);
+	}
+
+	.traveller{
+		height: 60vh;
+	}
+
+	.main-message{
+		transform: translateY(50%);
+	}
+
+	.title-heading h1{
+		font-size: 25px;
+	}
+
+	.card-wrapper{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card{
+		margin: 10px;
+		transition: transform .5s;
+		width: 29%;
+	}
+
+	.card:hover{
+		transform: scale(1.05);
+	}
+
+	.heading:after{
+		top: 60px;
+	}
+
+	.menu-icons{
+		display: none;
+	}
+
+	#goUpBtn {
+		right: 30px;
+	}
+
+
+}
+
+
+@media screen and (min-width: 950px){
+	.traveller::before{
+		height: 227px;
+		background: url("../images/wave-large.png");
+		background-size: cover;
+	}
+
+	.testimonials::before{
+		height: 227px;
+		background: url("../images/wave-large-reversed.png");
+		background-size: cover;
+	}
+
+	.card{
+		margin: 20px;
+	}
+}
+
+
+@media screen and (min-width: 1200px){
+	.traveller{
+		height: 75vh;
+	}
+}
+
+
+	
+
+

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nature Tours | About</title>
+    <!--Ikonat-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Fontet e Google-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/about-styles.css">
+    <!--Ikonat e rrjeteve sociale-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <nav id="nav">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+
+                 
+                <div class="menu-icons open">
+                    <i class="icon ion-md-menu"></i>
+                </div>
+
+                <ul class="nav-list">
+                    <div class="menu-icons close">
+                        <i class="icon ion-md-close"></i>
+                    </div>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="destinations.html" class="nav-link">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link current">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <button onclick="topFunction()" id="goUpBtn" title="Go to top"><i class="icon ion-md-arrow-up" style='margin: 0 5px';></i></button>
+        <section class="traveller">
+            <div class="container">
+                <div class="main-message">
+                    <h1>About Us</h1>
+                    <p>
+                       Learn everything about the team and Contact us
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="who">
+                    <div class="whoText">
+                        <h1>Who we are</h1>
+                        <h3>A global team behind a smart product</h3>
+                        <p>It's always good to bring a slower friend with you on a hike. If you happen to come across bears, the whole group doesn't have to worry. Only the slowest in the group do. That was the lesson they were about to learn that day.</p>
+                        <a href="#"><input id="formBtn" type="button" value="Join Us"></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="title-heading">
+                <h1>Looking for something in particular?</h1>
+            </div>
+            <div class="aboutUS">
+                <div class="container">
+                    <div class="activities-grid">
+
+                     <div class="activities-grid-item">
+                        <img src="images/sales.png">
+                        <h1>Sales</h1>
+                        <p>For purchasing Nature Tours and multi-destination plans</p>
+                        <a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
+                    </div>
+                
+                    <div class="activities-grid-item">
+                        <img src="images/support.png">
+                        <h1>Support</h1>
+                        <p>Need help with Nature Tours? Report issues and ask questions here</p>
+                        <a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
+                    </div>
+               
+
+                    <div class="activities-grid-item">
+                        <img src="images/pressKit.png">
+                        <h1>Press Kit</h1>
+                        <p>Download our brand pack including destination cards and discounts</p>
+                        <a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="infoPic"></div>
+            <div class="container">
+                <div class="map">
+                    <div class="title-heading">
+                        <h1 style="font-size: 20px">How to find Nature Tours HQ</h1>
+                    </div>
+                   <h3>Reykjavík</h3>
+                   <p>Tjornin Viewpoint</p>
+                   <p>Tjarnargata 33, 101 Reykjavík, Iceland</p>
+                   <img src="images/icelandlogo.jpg">
+                   
+                </div>
+            </div>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478920.9921623655!2d-23.728585198939296!3d64.80143039929249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2zSXNsYW5kw6s!5e0!3m2!1ssq!2s!4v1592580024308!5m2!1ssq!2s" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contactUS">
+                    <div class="contactForm">
+                        <form>
+                            <h2>CONTACT US</h2>
+                            <input id="fname" type="text" name="fname" placeholder="Emer"> <br>
+                            <input id="lname" type="text" name="lname" placeholder="Mbiemer"> <br>
+                            <input id="email" type="mail" name="email" placeholder="Email"> <br>
+                            <input id="subject" type="text" name="subject" placeholder="Subject"> <br>
+                            <textarea rows="3" cols="40" id="textarea" placeholder="Mesazh" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea> <br>
+                            <input id="formBtn" type="button" value="Send" onclick="Output()" >
+                        </form>
+                    </div>
+                    <div class="contact-image"><img src="images/about-card.png" style="padding-top: 100px;"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+     <footer>
+        <p>&copy; 2020 Tours. All Rights Reserved</p>
+    </footer>
+
+
+</body>
+
+<script type="text/javascript" src="javascript/scripts.js"></script>
+
+</html>

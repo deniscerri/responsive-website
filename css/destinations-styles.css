@@ -1,0 +1,1012 @@
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	font-family: 'Nunido', sans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+
+}
+
+p{
+	font-size: 16px;
+}
+
+img{
+	width:100%;
+	max-width: 100%;
+	height:auto;
+}
+
+section{
+	padding: 5rem 0;
+}
+
+
+
+/*header*/
+header{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+
+#goUpBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 10px; 
+  z-index: 5000; 
+  border: none; 
+  outline: none; 
+  background-color: #3399ff; 
+  color: black; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50%;
+  font-size: 18px; 
+}
+
+#goUpBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.container{
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.tile-container{
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	
+}
+
+.destination-container{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 5px;
+}
+
+nav{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	
+}
+
+.menu-icons i{
+	font-size: 35px;
+	color: white;
+	cursor: pointer;
+}
+
+.close i{
+ 	color: #eb648c;
+}
+
+
+
+.nav-brand{
+	width: 20px;
+	transition: all 250ms ease-in-out;
+}
+
+
+.nav-list{
+	width: 250px;
+	height: 100vh;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	right: -260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+	transition: all 650ms ease-in-out;
+}
+
+
+.nav-list.active{
+	right: 0;
+
+}
+
+.close{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+}
+
+.nav-item{
+	margin: 15px 0;
+}
+
+.nav-link{
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgba(0,0,0,.7);
+}
+
+
+
+/*Fotoja kryesore*/
+.traveller{
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2	) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/destinations.png") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.traveller:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 47px;
+	background: url("../images/wave-small.png") center no-repeat;
+	background-size: cover;
+}
+
+.main-message{
+	width: 100%;
+	max-width: 1000px;
+	position: absolute;
+	top: 0;
+	bottom: 50%;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+	color: #fafafa;
+	text-transform: uppercase;
+	transform: translateY(20%);
+	text-align: center;
+}
+
+
+.main-message h3{
+	font-size: 16px;
+}
+
+.main-message h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 40px;
+	margin: 10px 0;
+
+}
+
+.main-message p{
+	text-transform: capitalize;
+}
+
+.btn{
+	background-color: orange;
+	border-radius: 20px;
+	color: white;
+	display: block;
+	padding: 0 15px;
+	font-size: 25px;
+	text-transform: uppercase;
+	transition: background-color 650ms;
+	z-index: 300;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.btn:hover{
+	background-color: white;
+	color: black;
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+	transition: all .5s;
+}
+
+
+
+
+
+
+.category-btn{
+	background-color: white;
+	border-radius: 20px;
+	color: black;
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	transition: background-color 650ms;
+
+}
+
+.category-btn:hover{
+	color:white;
+	background-color: black;
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+	transition: all .5s;
+}
+
+
+/*Artikulli i destinacioneve*/
+.hidden-article{
+	position: absolute;
+	top: 70vh;
+	display: none;
+	background-color: black;
+	max-width: 1280px;
+}
+
+.article-image h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	margin-top: 10px;
+	position: absolute;
+	top: 30vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 0;
+	text-shadow: 2px 2px black;
+}
+
+.article-image h3{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	margin-bottom: 30px;
+	position: absolute;
+	top: 63vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 0;
+	text-shadow: 2px 2px black;
+}
+
+
+.article-image{
+	height: 70vh;
+	background-image: url(../images/destinations/mount-toubkal.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0 0 30px 30px; 
+}
+
+.paragraph-section{
+	margin-top: 10px;
+	width: 100%;
+	position: relative;
+}
+
+.paragraph-section p{
+	margin: 0 5px;
+	font-family: Nunito, sans-serif;
+    font-size: 15px;
+	color: white;
+	height: 70%;
+	margin-bottom: 20px;
+}
+
+.map-section{
+	display: flex;
+	height: 40vh;
+	border-radius: 20px 20px 0 0; 
+}
+
+.article-btn{
+	display: none;
+	border-radius: 50%;
+	color: white;
+	position: absolute;
+	top: 70px;
+	right: 3px;
+	margin: 0 10px;
+	border: none; 
+	outline: none; 
+	padding: 0px; 
+	font-size: 35px; 
+}
+
+.article-prev{
+	border-radius: 50%;
+	position: absolute;
+	left: 2%;
+	font-size: 35px;
+	color: white;
+	top: 60vh;
+}
+
+.article-next{
+	top: 60vh;
+	border-radius: 50%;
+	position: absolute;
+	right: 2%;
+	font-size: 35px;
+	color: white;
+}
+
+.article-prev:hover,.article-next:hover,.article-btn:hover{
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+	transition: all .5s;
+}
+
+
+.hidden{
+	display: none;
+}
+
+
+.categories{
+	height: 50px;
+}
+.categories a{
+	color: black;
+}
+
+
+
+
+.experience-outdoors{
+	padding: 0;
+}
+
+.title-heading{
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 100px;
+	
+}
+
+.title-heading h3{
+	font-size: 14px;
+}
+
+.title-heading h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 20px;
+	margin: 35px 0 10px;
+}
+
+.title-heading p{
+	text-transform: lowercase;
+}
+
+/*Responsive grid*/
+.activities-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-gap: 5px;
+	
+}
+
+.activities-grid-item{
+	height: 200px;
+	color: #fafafa;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.activities-grid-item::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+	z-index: -1;
+}
+
+.image{
+	height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+.image:hover{
+	transform: scale(1.3) rotate(-3deg);
+}
+
+
+
+.activities-grid-item h1{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: 40%;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+.activities-grid-item h3{
+	font-family: 'Aldrich', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+/*Begin Adventures*/
+.adventure-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 25px;
+	margin-bottom: 20px;
+}
+
+.adventure-grid p{
+	color: rgba(0,0,0,0.7);
+}
+
+footer{
+	padding: 25px 0;
+	background-color: black;
+	text-align: center;
+	color: white;
+
+}
+
+
+.heading{
+	text-transform: uppercase;
+	font-size: 35px;
+	letter-spacing: 10px;
+	margin-right: -30px;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #333;
+	position: relative;
+}
+
+.heading::after{
+	content: "";
+	width: 100px;
+	height: 8px;
+	background-color: #45e19f;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 20px;
+}
+
+.card-wrapper{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.card{
+	width: 320px;
+	background-color: #ebeef8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+	box-shadow: 5px 5px 30px rgba(0,0,0,0,2);
+}
+
+.card .card img{
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	
+}
+
+.profile-img{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-top: -110px;
+	z-index: 999;
+	border: 10px solid #ebeef8;
+}
+
+.card h1{
+	font-size: 25px;
+	color: #333;
+	margin: 15px 0;
+}
+
+.job-title{
+	color: #777;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.about{
+	font-size: 15px;
+	margin: 15px 0;
+	font-style: italic;
+	text-align: center;
+	color: #333;
+}
+
+.card .btn{
+	padding: 10px 25px;
+	background-color: #45e19f;
+	border-radius: 20px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: #eee;
+	font-size: 14px; 
+	transition: all .5s;
+}
+
+.card .btn:hover{
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+
+}
+
+.card .btn:active{
+	transform: translateY(0);
+	box-shadow: none;
+	
+}
+
+.social-media{
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 0;
+	margin-top: 15px;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+.social-media i{
+	font-size: 30px;
+	transition: color .5s;
+}
+
+.fa-facebook-square{
+	color: #3b5999;
+}
+
+.fa-twitter-square{
+	color: #55acee;
+}
+
+.fa-instagram{
+	color: #e6683c;
+}
+
+.fa-reddit-square{
+	color: #ff4500;
+}
+
+.fa-discord{
+	color: #7289da;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-reddit-square:hover,
+.fa-discord:hover{
+	color: #45e19f;
+}
+
+
+
+
+
+@media screen and (min-width: 350px){
+	
+	.main-message{
+		transform: translateY(40%);
+	}
+
+}
+
+
+@media screen and (min-width: 470px){
+	
+	.traveller::before{
+		height: 94px;
+		background: url("../images/wave-medium.png");
+		background-size: cover;
+	}
+
+	.testimonials::before{
+		height: 94px;
+		background: url("../images/wave-medium-reversed.png");
+		background-size: cover;
+	}
+
+}
+
+
+@media screen and (min-width: 700px){
+	header{
+		height: 80px;
+	}
+	.nav-brand{
+		width: 35px;
+	}
+
+	.nav-list{
+		width: initial;
+		height: initial;
+		background-color: transparent;
+		position: initial;
+		top: initial;
+		right: initial;
+		flex-direction: row;
+		transition: initial;
+	}
+
+	.menu-icons{
+		display: none;
+	}
+
+	.nav-item{
+		margin: 0 25px;
+	}
+
+	.nav-link,
+	.current{
+		color: #fafafa;
+		position: relative;
+		font-size: 13px;
+	}
+
+	.nav-link::before,
+	.current::before{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		background-color: #eb648c;
+		width: 100%;
+		height: 2px;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 600ms;
+	}
+
+	.current::before{
+		transform: scaleX(1);
+	}
+
+	.nav-link:hover::before{
+		transform: scaleX(1);
+	}
+
+	.traveller{
+		height: 60vh;
+	}
+
+	.main-message{
+		transform: translateY(50%);
+	}
+
+	.title-heading h1{
+		font-size: 25px;
+	}
+
+	.card-wrapper{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card{
+		margin: 20px;
+		transition: transform .5s;
+	}
+
+	.hidden-article{
+		position: absolute;
+		top: 90vh;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		display: none;
+		background-color: black;
+		max-width: 1280px;
+		overflow: auto;
+    }
+
+	.article-image h1{
+		font-family: 'Aldrich', sans-serif;
+		font-size: 40px;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		margin-top: 10px;
+		position: absolute;
+		top: 55vh;
+		left: 0;
+		transform: translate(0%, 0%);
+		margin-left: 10vh;
+		text-shadow: 2px 2px black;
+	}
+
+	.article-image h3{
+		font-family: 'Aldrich', sans-serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		margin-bottom: 30px;
+		position: absolute;
+		top: 65vh;
+		margin-left: 10vh;
+		left: 0;
+		transform: translate(0%, 0%);
+		text-shadow: 2px 2px black;
+	}
+
+
+
+	.article-image{
+		height: 70vh;
+		width: 100%;
+		background-image:url(../images/destinations/mount-toubkal.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		float: left;
+		border-radius: 0;
+	}
+
+	.paragraph-section{
+		height: 100%;
+		width: 50%;
+		position: relative;
+		float: left;
+
+	}
+
+	.paragraph-section p{
+		margin: 0 5px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	    font-size: 1.2vw;
+		color: white;
+		height: 70%;
+		margin-bottom: 20px;
+	}
+
+	.map-section{
+		height: 250px;
+		width: 45%;
+		float: right;
+		border-radius: 20px;
+	}
+
+	.article-btn{
+		border-radius: 50%;
+		color: white;
+		display: none;
+		position: fixed;
+		top: 50px;
+		right: 10px;
+		margin: 0 5px;
+		border: none; 
+		outline: none; 
+		padding: 15px; 
+		font-size: 18px; 
+		cursor: pointer;
+	}
+
+	.article-btn:hover{
+		background-color: rgba(0,0,0,0.5);
+	}
+
+
+
+	.article-prev{
+		padding: 15px;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		font-size: 18px;
+		color: white;
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.article-next{
+		padding: 15px;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		font-size: 18px;
+		color: white;
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.menu-icons{
+		display: none;
+	}
+
+	.activities-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 5px;
+	
+}
+
+.activities-grid-item{
+	height: 300px;
+}
+
+.activities-grid-item h1{
+	font-size: 27px;
+}
+
+	#goUpBtn {
+		right: 30px;
+	}
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 950px){
+	.traveller::before{
+		height: 227px;
+		background: url("../images/wave-large.png");
+		background-size: cover;
+	}
+}
+
+
+@media screen and (min-width: 1200px){
+	.traveller{
+		height: 75vh;
+	}
+}
+../
+/*Hiking images*/
+#h00{background-image: url("../images/destinations/pennine-way.jpg");}	
+#h0{background-image: url("../images/destinations/pennine-way.jpg");}	
+#h1{background-image: url("../images/destinations/camino-de-santiago.jpg");}
+#h2{background-image: url("../images/destinations/appalachian-trail.jpg");}
+#h3{background-image: url("../images/destinations/the-basho-wayfarer.jpg");}
+#h4{background-image: url("../images/destinations/refugio-frey-and-cerro-catedral.jpg");}
+#h5{background-image: url("../images/destinations/mount-toubkal.jpg");}
+#h6{background-image: url("../images/destinations/dragons-back.jpg");}
+#h7{background-image: url("../images/destinations/the-dingle-way.jpg");}
+#h8{background-image: url("../images/destinations/tergo-la-trek.jpg");}
+#h9{background-image: url("../images/destinations/tahoe-rim-trail.jpg");}
+#h10{background-image: url("../images/destinations/the-silk-road.jpg");}
+#h11{background-image: url("../images/destinations/lechweg-trail.jpg");}
+#h12{background-image: url("../images/destinations/indus-valley.jpg");}
+#h13{background-image: url("../images/destinations/bwindi-forest.jpg");}
+#h14{background-image: url("../images/destinations/west-coast-trail.jpg");}
+#h15{background-image: url("../images/destinations/percorsi-occitani.jpg");}
+#h16{background-image: url("../images/destinations/lares-royal-trail.jpg");}
+#h17{background-image: url("../images/destinations/monteverde-cloud-forest-reserve.jpg");}
+#h18{background-image: url("../images/destinations/the-lycian-way.jpg");}
+#h19{background-image: url("../images/destinations/the-balkans.jpg");}
+#h20{background-image: url("../images/destinations/cloud-forest-trek.jpg");}
+#h21{background-image: url("../images/destinations/cape-to-cape-track.jpg");}
+
+/*Camping images*/
+#c0{background-image: url("../images/destinations/mount-cook.jpg");}
+#c1{background-image: url("../images/destinations/devon.jpg");}
+#c2{background-image: url("../images/destinations/loch-lomond.jpg");}
+#c3{background-image: url("../images/destinations/the-alps.jpg");}
+#c4{background-image: url("../images/destinations/hossa-park.jpg");}
+#c5{background-image: url("../images/destinations/skane.jpg");}
+#c6{background-image: url("../images/destinations/zion-park.jpg");}
+#c7{background-image: url("../images/destinations/patagonia.jpg");}
+#c8{background-image: url("../images/destinations/vancouver-island.jpg");}
+#c9{background-image: url("../images/destinations/asturias.jpg");}
+#c10{background-image: url("../images/destinations/connemara.jpg");}
+#c11{background-image: url("../images/destinations/simien-mountains.jpg");}
+#c12{background-image: url("../images/destinations/tasmania.jpg");}
+#c13{background-image: url("../images/destinations/seto-sea.jpg");}
+#c14{background-image: url("../images/destinations/ladakh.jpg");}
+
+
+/*River Rafting images*/
+#r0{background-image: url("../images/destinations/grand-canyon-rafting.jpg");}
+#r1{background-image: url("../images/destinations/rafting-middle-fork.jpg");}
+#r2{background-image: url("../images/destinations/zambezi-river-rafting.jpg");}
+#r3{background-image: url("../images/destinations/fatalefu-river-rafting.jpg");}
+#r4{background-image: url("../images/destinations/rangitikei-river-confluence.jpg");}
+#r5{background-image: url("../images/destinations/noce-river.jpg");}
+#r6{background-image: url("../images/destinations/sjoa-river-norway.jpg");}
+#r7{background-image: url("../images/destinations/rafting-tara-river-montenegro.jpg");}
+
+/*Snowboarding images*/
+#s0{background-image: url("../images/destinations/snowbird.jpg");}
+#s1{background-image: url("../images/destinations/cervinia.jpg");}
+#s2{background-image: url("../images/destinations/telluride.jpg");}
+#s3{background-image: url("../images/destinations/verbier.jpg");}
+#s4{background-image: url("../images/destinations/charmonix.jpg");}
+#s5{background-image: url("../images/destinations/mammoth-mountain.jpg");}
+#s6{background-image: url("../images/destinations/squaw-valley.jpg");}
+#s7{background-image: url("../images/destinations/alpine-meadows.jpg");}
+#s8{background-image: url("../images/destinations/whistler-blackcomb.jpg");}
+#s9{background-image: url("../images/destinations/mt-baker.jpg");}
+
+
+/*Skydiving images*/
+#sk0{background-image: url("../images/destinations/palm-jumeirah.jpeg");}
+#sk1{background-image: url("../images/destinations/fox-glacier.jpeg");}
+#sk2{background-image: url("../images/destinations/hawaii.jpeg");}
+#sk3{background-image: url("../images/destinations/interlaken.jpeg");}
+#sk4{background-image: url("../images/destinations/north-beach.jpeg");}
+#sk5{background-image: url("../images/destinations/snohomish.jpeg");}
+#sk6{background-image: url("../images/destinations/mount-everest.jpeg");}
+#sk7{background-image: url("../images/destinations/pattaya.jpeg");}
+#sk8{background-image: url("../images/destinations/moab.jpeg");}
+
+
+/*Fishing images*/
+#f0{background-image: url("../images/destinations/nova-scotia.jpg");}
+#f1{background-image: url("../images/destinations/belize.jpg");}
+#f2{background-image: url("../images/destinations/malindi.jpg");}
+#f3{background-image: url("../images/destinations/key-west.jpg");}
+#f4{background-image: url("../images/destinations/panama.jpg");}
+#f5{background-image: url("../images/destinations/louisiana.jpg");}
+#f6{background-image: url("../images/destinations/bermuda.jpg");}
+#f7{background-image: url("../images/destinations/bahamas.jpg");}
+#f8{background-image: url("../images/destinations/cabo-san-lucas.jpg");}
